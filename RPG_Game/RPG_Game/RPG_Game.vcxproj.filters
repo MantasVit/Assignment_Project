@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="MSEngine">
+      <UniqueIdentifier>{e6df2a99-ce7d-4b56-89d5-a3d497a077bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MSEngine\Header Files">
+      <UniqueIdentifier>{b1fa581d-6ac5-4848-8374-84bd245b8f54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MSEngine\Source Files">
+      <UniqueIdentifier>{c4881af2-f03d-4440-aeda-4b4c1dce49e1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>MSEngine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineManager.cpp">
+      <Filter>MSEngine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameDatabase.cpp">
+      <Filter>MSEngine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>MSEngine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>MSEngine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="item.cpp">
+      <Filter>MSEngine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectBase.cpp">
+      <Filter>MSEngine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>MSEngine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>MSEngine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldSpace.cpp">
+      <Filter>MSEngine\Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Camera.h">
+      <Filter>MSEngine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineManager.h">
+      <Filter>MSEngine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameDatabase.h">
+      <Filter>MSEngine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager.h">
+      <Filter>MSEngine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>MSEngine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="item.h">
+      <Filter>MSEngine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectBase.h">
+      <Filter>MSEngine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>MSEngine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>MSEngine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldSpace.h">
+      <Filter>MSEngine\Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
