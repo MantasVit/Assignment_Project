@@ -153,27 +153,33 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Controller.cpp" />
     <ClCompile Include="EngineManager.cpp" />
     <ClCompile Include="GameDatabase.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="item.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Matrix2D.cpp" />
     <ClCompile Include="ObjectBase.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="Vector2D.cpp" />
     <ClCompile Include="WorldSpace.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="Controller.h" />
     <ClInclude Include="EngineManager.h" />
     <ClInclude Include="GameDatabase.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="item.h" />
+    <ClInclude Include="Matrix2D.h" />
     <ClInclude Include="ObjectBase.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="Texture.h" />
+    <ClInclude Include="Vector2D.h" />
     <ClInclude Include="WorldSpace.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
