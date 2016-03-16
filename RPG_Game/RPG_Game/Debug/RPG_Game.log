@@ -1,13 +1,2 @@
-﻿  WorldSpace.cpp
-  Texture.cpp
-  Renderer.cpp
-  ObjectBase.cpp
-  main.cpp
-  item.cpp
-  GameObject.cpp
-  GameManager.cpp
-  GameDatabase.cpp
-  EngineManager.cpp
-  Camera.cpp
-  Generating Code...
-  RPG_Game.vcxproj -> C:\Users\40010931\Source\Repos\Assignment_Project\RPG_Game\Debug\RPG_Game.exe
+﻿  Text.cpp
+  RPG_Game.vcxproj -> E:\Users\Mantasas\Source\Repos\Assignment_Project\RPG_Game\Debug\RPG_Game.exe

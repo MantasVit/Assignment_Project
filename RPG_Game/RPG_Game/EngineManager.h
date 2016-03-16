@@ -6,6 +6,8 @@
 #include "GameDatabase.h"
 #include "WorldSpace.h"
 #include "Camera.h"
+#include "Text.h"
+#include "FPS.h"
 
 class EngineManager{
 protected:
@@ -16,6 +18,8 @@ protected:
 	GameObject* axe;
 	Camera mainCamera;
 	WorldSpace* mine;
+	Text* myText;
+	FPS* fps;
 public:
 	EngineManager();
 	~EngineManager();

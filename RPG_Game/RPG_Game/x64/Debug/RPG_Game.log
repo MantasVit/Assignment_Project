@@ -1,12 +1,2 @@
-﻿  Camera.cpp
-  Generating Code...
-  Skipping... (no relevant changes detected)
-  main.cpp
-  item.cpp
-  WorldSpace.cpp
-  ObjectBase.cpp
-  GameObject.cpp
-  GameManager.cpp
-  GameDatabase.cpp
-  EngineManager.cpp
+﻿  EngineManager.cpp
   RPG_Game.vcxproj -> E:\Users\Mantasas\Source\Repos\Assignment_Project\RPG_Game\x64\Debug\RPG_Game.exe

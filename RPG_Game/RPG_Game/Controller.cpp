@@ -26,4 +26,5 @@ bool Controller::checkKey(int key){
 
 int Controller::getPressedKey(){
 	checkKey(SDLK_UP);
+	return 0;
 }

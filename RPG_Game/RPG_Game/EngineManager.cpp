@@ -26,6 +26,9 @@ void EngineManager::createWindow(std::string gameTitle, int resolutionWidth, int
 	mine = new WorldSpace("mine", Renderer::useRenderer()->getRenderer());
 	mainCamera.setCameraX(mine->getXCoordinates() / 2);
 	mainCamera.setCameraY(mine->getYCoordinates() / 2);
+	//myText->showText("lolktest", Renderer::useRenderer()->getRenderer());
+	myText = new Text(Renderer::useRenderer()->getRenderer(), FPS::useFPS()->update());
+	fps = new FPS();
 }
 
 SDL_Event* EngineManager::getEvent(){
@@ -41,5 +44,8 @@ void EngineManager::update(){
 	for(int i = 0; i < GameDatabase::useDatabase()->getSize(); i++){
 		Renderer::useRenderer()->renderTexture(Renderer::useRenderer()->getRenderer(), GameDatabase::useDatabase()->getList().at(i)->getTexture(), NULL, GameDatabase::useDatabase()->getList().at(i)->getRect());
 	}
+	myText->setText(Renderer::useRenderer()->getRenderer(), FPS::useFPS()->update());
+	Renderer::useRenderer()->renderTexture(Renderer::useRenderer()->getRenderer(), myText->getTexture(), NULL, NULL);
+	std::cout<<fps->update()<<std::endl;
 	Renderer::useRenderer()->updateRenderer(Renderer::useRenderer()->getRenderer());
 }
