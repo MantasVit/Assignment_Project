@@ -27,7 +27,7 @@ void EngineManager::createWindow(std::string gameTitle, int resolutionWidth, int
 	mainCamera.setCameraX(mine->getXCoordinates() / 2);
 	mainCamera.setCameraY(mine->getYCoordinates() / 2);
 	//myText->showText("lolktest", Renderer::useRenderer()->getRenderer());
-	myText = new Text(Renderer::useRenderer()->getRenderer(), FPS::useFPS()->update());
+	myText = new Text(Renderer::useRenderer()->getRenderer(), "fonts\\OpenSans-Regular.ttf", 100);
 	fps = new FPS();
 }
 
@@ -45,7 +45,7 @@ void EngineManager::update(){
 		Renderer::useRenderer()->renderTexture(Renderer::useRenderer()->getRenderer(), GameDatabase::useDatabase()->getList().at(i)->getTexture(), NULL, GameDatabase::useDatabase()->getList().at(i)->getRect());
 	}
 	myText->setText(Renderer::useRenderer()->getRenderer(), FPS::useFPS()->update());
-	Renderer::useRenderer()->renderTexture(Renderer::useRenderer()->getRenderer(), myText->getTexture(), NULL, NULL);
-	std::cout<<fps->update()<<std::endl;
+	Renderer::useRenderer()->renderTexture(Renderer::useRenderer()->getRenderer(), myText->getTexture(), myText->getRect_2(), myText->getRect());
+	//std::cout<<fps->update()<<std::endl;
 	Renderer::useRenderer()->updateRenderer(Renderer::useRenderer()->getRenderer());
 }
