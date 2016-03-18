@@ -23,7 +23,7 @@ std::string FPS::update(){
 	convert.str("");
 	currentFrameTime = SDL_GetTicks();
 	if (currentFrameTime > lastTime) {
-		FPScounter = (1000 / (currentFrameTime - lastTime + 4));
+		FPScounter = (1000 / (currentFrameTime - lastTime));
 		convert<<FPScounter;
 		framesPerSecond = convert.str();
 		lastTime = currentFrameTime;

@@ -14,6 +14,8 @@ protected:
 	int FPScounter;
 	std::string framesPerSecond;
 	std::ostringstream convert;
+	int fpss;
+	int fpsss;
 	//Timer
 public:
 	FPS();

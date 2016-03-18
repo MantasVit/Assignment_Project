@@ -4,6 +4,7 @@
 #include <string>
 #include <iostream>
 #include "FPS.h"
+#include <vector>
 
 class Text{
 protected:
@@ -21,13 +22,25 @@ protected:
 	SDL_Color  textColour;
 	SDL_Texture* finished;
 	std::string all;
+	std::string textSheet;
+	std::string checkList;
+	SDL_Rect textSheetRect;
+	SDL_Rect textSheetRect2;
 	SDL_Rect textRect;
 	SDL_Rect textRect2;
 	SDL_Rect textRect3;
+	SDL_Rect textRect4;
+	SDL_Rect textRect5;
 	SDL_Rect textRect_2;
+	SDL_Rect textRect_3;
+	SDL_Rect textRect_4;
+	SDL_Rect textRect_5;
 	SDL_Rect textRect2_2;
 	SDL_Rect textRect3_2;
 	int w, h;
+	int ij;
+	std::vector<SDL_Rect*> letter;
+	std::vector<SDL_Rect*> letterSource;
 public:
 	Text();
 	Text(SDL_Renderer* renderer, std::string Text);
@@ -36,7 +49,20 @@ public:
 	SDL_Texture* showText(std::string Text, SDL_Renderer* renderer);
 	SDL_Texture* getTexture();
 	void setText(SDL_Renderer* renderer, std::string Text);
+	int getI();
 	SDL_Rect* getRect();
+	SDL_Rect* getRect2();
+	SDL_Rect* getRect3();
+	SDL_Rect* getRect4();
 	SDL_Rect* getRect_2();
+	SDL_Rect* getRect_3();
+	SDL_Rect* getRect_4();
+	SDL_Rect* getRect_5();
+	SDL_Rect* getTextSheet();
+	SDL_Rect* getTextSheet2();
+	void outputText(std::string Text);
+	std::vector<SDL_Rect*> getLetter();
+	SDL_Rect* getLetterRect(int I);
+	SDL_Rect* getLetterSourceRect(int I);
 };
 

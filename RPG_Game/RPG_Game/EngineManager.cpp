@@ -29,6 +29,7 @@ void EngineManager::createWindow(std::string gameTitle, int resolutionWidth, int
 	//myText->showText("lolktest", Renderer::useRenderer()->getRenderer());
 	myText = new Text(Renderer::useRenderer()->getRenderer(), "fonts\\OpenSans-Regular.ttf", 100);
 	fps = new FPS();
+	
 }
 
 SDL_Event* EngineManager::getEvent(){
@@ -44,8 +45,15 @@ void EngineManager::update(){
 	for(int i = 0; i < GameDatabase::useDatabase()->getSize(); i++){
 		Renderer::useRenderer()->renderTexture(Renderer::useRenderer()->getRenderer(), GameDatabase::useDatabase()->getList().at(i)->getTexture(), NULL, GameDatabase::useDatabase()->getList().at(i)->getRect());
 	}
+	myText->outputText(FPS::useFPS()->update());
 	myText->setText(Renderer::useRenderer()->getRenderer(), FPS::useFPS()->update());
-	Renderer::useRenderer()->renderTexture(Renderer::useRenderer()->getRenderer(), myText->getTexture(), myText->getRect_2(), myText->getRect());
-	//std::cout<<fps->update()<<std::endl;
+	for (int i = 0; i < myText->getLetter().size(); i++) {
+		Renderer::useRenderer()->renderTexture(Renderer::useRenderer()->getRenderer(), myText->getTexture(), myText->getLetterSourceRect(i), myText->getLetterRect(i));
+	}
+	
+	//Renderer::useRenderer()->renderTexture(Renderer::useRenderer()->getRenderer(), myText->getTexture(), myText->getRect_3(), myText->getRect2());
+	//Renderer::useRenderer()->renderTexture(Renderer::useRenderer()->getRenderer(), myText->getTexture(), myText->getRect_4(), myText->getRect3());
+	//Renderer::useRenderer()->renderTexture(Renderer::useRenderer()->getRenderer(), myText->getTexture(), myText->getRect_5(), myText->getRect4());
+	std::cout<<fps->update() << std::endl;
 	Renderer::useRenderer()->updateRenderer(Renderer::useRenderer()->getRenderer());
 }
