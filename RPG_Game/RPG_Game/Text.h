@@ -9,6 +9,10 @@
 class Text{
 protected:
 	SDL_Surface* text;
+	SDL_Surface* number;
+	SDL_Surface* uppercase;
+	SDL_Surface* lowercase;
+	SDL_Surface* symbol;
 	//SDL_Surface* text2;
 	//SDL_Surface* text3;
 	//SDL_Surface* text4;
@@ -21,6 +25,14 @@ protected:
 	TTF_Font* font;
 	SDL_Color  textColour;
 	SDL_Texture* finished;
+	SDL_Texture* numberTexture;
+	SDL_Texture* uppercaseTexture;
+	SDL_Texture* lowercaseTexture;
+	SDL_Texture* symbolTexture;
+	std::string numbers;
+	std::string lowercases;
+	std::string uppercases;
+	std::string symbols;
 	std::string all;
 	std::string textSheet;
 	std::string checkList;

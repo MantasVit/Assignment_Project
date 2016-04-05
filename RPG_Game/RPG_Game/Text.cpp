@@ -18,11 +18,23 @@ Text::Text(SDL_Renderer* renderer, std::string Text){
 	{
 		std::cout << "no";
 	}
-	all = "1234567890";
+	all = "0123456789";
+	numbers = "1234567890";
+	lowercases = "abcdefghijklmnopqrstuvwxyz";
+	uppercases = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	symbols = "-+_=*/\<>?:;@'#~[{]}()!£$%^&";
 	font = TTF_OpenFont("fonts\\OpenSans-Regular.ttf", 1000);
 	textColour = {0, 0, 0};
 	text = TTF_RenderText_Solid(font, Text.c_str(), textColour);
+	number = TTF_RenderText_Solid(font, numbers.c_str(), textColour);
+	lowercase = TTF_RenderText_Solid(font, lowercases.c_str(), textColour);
+	uppercase = TTF_RenderText_Solid(font, uppercases.c_str(), textColour);
+	symbol = TTF_RenderText_Solid(font, symbols.c_str(), textColour);
 	finished = SDL_CreateTextureFromSurface(renderer, text);
+	numberTexture = SDL_CreateTextureFromSurface(renderer, number);
+	lowercaseTexture = SDL_CreateTextureFromSurface(renderer, lowercase);
+	uppercaseTexture = SDL_CreateTextureFromSurface(renderer, uppercase);
+	symbolTexture = SDL_CreateTextureFromSurface(renderer, symbol);
 }
 
 Text::Text(SDL_Renderer* renderer, std::string Font, int fontSize){
@@ -32,11 +44,22 @@ Text::Text(SDL_Renderer* renderer, std::string Font, int fontSize){
 		std::cout<<"no";
 	}
 	all = "0123456789";
-	textSheet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-+_=*/\<>?:;@'#~[{]}()!£$%^&";
+	numbers = "1234567890";
+	lowercases = "abcdefghijklmnopqrstuvwxyz";
+	uppercases = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	symbols = "-+_=*/\<>?:;@'#~[{]}()!£$%^&";
 	font = TTF_OpenFont(Font.c_str(), fontSize);
 	textColour = {0, 0, 0};
 	text = TTF_RenderText_Solid(font, all.c_str(), textColour);
+	number = TTF_RenderText_Solid(font, numbers.c_str(), textColour);
+	lowercase = TTF_RenderText_Solid(font, lowercases.c_str(), textColour);
+	uppercase = TTF_RenderText_Solid(font, uppercases.c_str(), textColour);
+	symbol = TTF_RenderText_Solid(font, symbols.c_str(), textColour);
 	finished = SDL_CreateTextureFromSurface(renderer, text);
+	numberTexture = SDL_CreateTextureFromSurface(renderer, number);
+	lowercaseTexture = SDL_CreateTextureFromSurface(renderer, lowercase);
+	uppercaseTexture = SDL_CreateTextureFromSurface(renderer, uppercase);
+	symbolTexture = SDL_CreateTextureFromSurface(renderer, symbol);
 	SDL_QueryTexture(finished, NULL, NULL, &w, &h);
 	//text1 = TTF_RenderText_Solid(font, "1234567890", textColour);
 	//text2 = TTF_RenderText_Solid(font, "2", textColour);
