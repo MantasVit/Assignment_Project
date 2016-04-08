@@ -1,2 +1,44 @@
 ﻿  Text.cpp
-  RPG_Game.vcxproj -> E:\Users\Mantasas\Source\Repos\Assignment_Project\RPG_Game\Debug\RPG_Game.exe
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(12): warning C4129: '<': unrecognized character escape sequence
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(25): warning C4129: '<': unrecognized character escape sequence
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(91): warning C4018: '<': signed/unsigned mismatch
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(94): warning C4018: '<': signed/unsigned mismatch
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(97): warning C4018: '<': signed/unsigned mismatch
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(144): warning C4018: '<': signed/unsigned mismatch
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(145): warning C4018: '<': signed/unsigned mismatch
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(165): warning C4018: '<': signed/unsigned mismatch
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(166): warning C4018: '<': signed/unsigned mismatch
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(183): warning C4018: '<': signed/unsigned mismatch
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(184): warning C4018: '<': signed/unsigned mismatch
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(201): warning C4018: '<': signed/unsigned mismatch
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(202): warning C4018: '<': signed/unsigned mismatch
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(287): warning C4018: '<': signed/unsigned mismatch
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(288): warning C4018: '<': signed/unsigned mismatch
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(297): warning C4018: '<': signed/unsigned mismatch
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(313): warning C4018: '<': signed/unsigned mismatch
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(341): warning C4018: '<': signed/unsigned mismatch
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(342): warning C4018: '<': signed/unsigned mismatch
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(353): warning C4018: '<': signed/unsigned mismatch
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(369): warning C4018: '<': signed/unsigned mismatch
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(390): warning C4018: '<': signed/unsigned mismatch
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(396): warning C4018: '<': signed/unsigned mismatch
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(412): warning C4018: '<': signed/unsigned mismatch
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(433): warning C4018: '<': signed/unsigned mismatch
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(439): warning C4018: '<': signed/unsigned mismatch
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(455): warning C4018: '<': signed/unsigned mismatch
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(485): warning C4018: '<': signed/unsigned mismatch
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(486): warning C4018: '<': signed/unsigned mismatch
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(495): warning C4018: '<': signed/unsigned mismatch
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(511): warning C4018: '<': signed/unsigned mismatch
+  GameManager.cpp
+  EngineManager.cpp
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\enginemanager.cpp(136): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(197): warning C4715: 'Text::getRect3': not all control paths return a value
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(179): warning C4715: 'Text::getRect2': not all control paths return a value
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(161): warning C4715: 'Text::getRect': not all control paths return a value
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(215): warning C4715: 'Text::getRect4': not all control paths return a value
+  Compiling...
+  main.cpp
+  Generating Code...
+  RPG_Game.vcxproj -> C:\Users\Mantas\Source\Repos\Assignment_Project\RPG_Game\Debug\RPG_Game.exe
