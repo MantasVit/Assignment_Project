@@ -399,11 +399,10 @@ SDL_Rect* Text::getRect_5() {
 void Text::outputText(std::string Text) {
 	//if(perfTest == 1){
 	checkList = all;
-	bool letterChecked;
-	int lettersChecked = 0;
+	lettersChecked = 0;
 		//std::cout << checkList.at(i) << std::endl;
-		for (int j = 0; j < Text.size(); j++) {
-			for (int i = 0; i < checkList.size(); i++) {
+		for (j = 0; j < Text.size(); j++) {
+			for (i = 0; i < checkList.size(); i++) {
 				letterChecked = false;
 			//std::cout << Text.at(j) << std::endl;
 			//std::cout << "stuck in for loop" << std::endl;
@@ -412,13 +411,17 @@ void Text::outputText(std::string Text) {
 				if (letter.size() < Text.size()) {
 					letter.push_back(new SDL_Rect);
 				}
-				for (int k = lettersChecked; k < letter.size(); k++) {
+				for (k = lettersChecked; k < letter.size(); k++) {
 					
 				//if(k <= letter.size()){
 					//std::cout << "stuck in letter" << std::endl;
 					//std::cout << letter.size() << std::endl;
-					for (Text.size(); Text.size() < letter.size(); letter.pop_back()) {
+					for(Text.size(); Text.size() < letter.size(); letter.pop_back()){
+						delete letter.back();
 					}
+					//for(Text.size(); Text.size() < letter.size(); letter.pop_back()) {
+						//letter.shrink_to_fit();
+					//}
 					//for (int n = 0; n < 1; n++){
 						//std::cout << "letter: " << letter.size() << std::endl;
 					//letter.at(k)->h = h;
@@ -429,10 +432,14 @@ void Text::outputText(std::string Text) {
 					letter.at(k)->w = advance2.at(i);
 					letter.at(k)->x = advance2.at(i) * k;
 					letter.at(k)->y = minY2.at(i);
-					if (letterSource.size() < letter.size()) {
+					if(letterSource.size() < letter.size()) {
 						letterSource.push_back(new SDL_Rect);
 					}
-					for (int n = 0; n < letterSource.size(); n++){
+					for (letterSource.size(); letterSource.size() > letter.size(); letterSource.pop_back()){
+						delete letterSource.back();
+					}
+					std::cout<<letter.size()<<" "<<letterSource.size()<<std::endl;
+					for (n = 0; n < letterSource.size(); n++){
 						if (n == k) {
 							//std::cout << "letterSource: "<<letterSource.size()<< std::endl;
 							letterSource.at(n)->h = letter.at(k)->h;
@@ -456,7 +463,7 @@ void Text::outputText(std::string Text) {
 			}
 		}
 	//}
-	if(perfTest == 2){
+	/*if(perfTest == 2){
 		bool letterChecked;
 		int lettersChecked = 0;
 		bool lowerCheck = true, upperCheck = true, numCheck = true;
@@ -867,8 +874,8 @@ void Text::outputText(std::string Text) {
 				//}
 			//}
 		//}
-	}
-	if(perfTest == 3){
+	//}
+	/*if(perfTest == 3){
 		bool letterChecked;
 		int lettersChecked = 0;
 		//std::cout << checkList.at(i) << std::endl;
@@ -921,7 +928,7 @@ void Text::outputText(std::string Text) {
 				}
 			}
 		}
-	}
+	}*/
 }
 
 std::vector<SDL_Rect*> Text::getLetter() {

@@ -27,7 +27,7 @@ void EngineManager::createWindow(std::string gameTitle, int resolutionWidth, int
 	mainCamera.setCameraX(mine->getXCoordinates() / 2);
 	mainCamera.setCameraY(mine->getYCoordinates() / 2);
 	//myText->showText("lolktest", Renderer::useRenderer()->getRenderer());
-	Text::getText()->newText(Renderer::useRenderer()->getRenderer(), "fonts\\OpenSans-Regular.ttf", 450, 1);
+	Text::getText()->newText(Renderer::useRenderer()->getRenderer(), "fonts\\OpenSans-Regular.ttf", 100, 1);
 	//Text::getText()->newText(Renderer::useRenderer()->getRenderer(), "fonts\\OpenSans-Regular.ttf", 1000, 1);
 	//Text::getText()->newText(Renderer::useRenderer()->getRenderer(), "fonts\\OpenSans-Regular.ttf", 1000, 1);
 	//Text::getText()->newText(Renderer::useRenderer()->getRenderer(), "fonts\\OpenSans-Regular.ttf", 1000, 1);
@@ -149,10 +149,11 @@ void EngineManager::update(){
 	//Renderer::useRenderer()->renderTexture(Renderer::useRenderer()->getRenderer(), myText->getTexture(), myText->getRect_3(), myText->getRect2());
 	//Renderer::useRenderer()->renderTexture(Renderer::useRenderer()->getRenderer(), myText->getTexture(), myText->getRect_4(), myText->getRect3());
 	//Renderer::useRenderer()->renderTexture(Renderer::useRenderer()->getRenderer(), myText->getTexture(), myText->getRect_5(), myText->getRect4());
+	//std::cout<<"xD"<<std::endl;
 	//std::cout<<fps->update() << std::endl;
 	//Text::getText()->TEST(53);
 	//Text::getText()->TEST(10);
 	//Text::getText()->TEST(30);
-	Text::getText()->TEST(61);
+	//Text::getText()->TEST(61);
 	Renderer::useRenderer()->updateRenderer(Renderer::useRenderer()->getRenderer());
 }

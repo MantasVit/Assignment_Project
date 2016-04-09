@@ -71,6 +71,9 @@ protected:
 	std::array<int, 62> maxX2;
 	std::array<int, 62> advance2;
 	int w2, h2;
+	bool letterChecked;
+	int lettersChecked;
+	int i, j, k, n;
 public:
 	static Text* getText();
 	Text();
