@@ -1,37 +1,18 @@
 #pragma once
 
 #include "include\SDL_ttf.h"
-#include <string>
 #include <iostream>
 #include "FPS.h"
-#include <vector>
+#include "TTF.h"
 #include <array>
 
 class Text{
 protected:
-	static Text* TextPointer;
-	SDL_Surface* text;
-	SDL_Surface* number;
-	SDL_Surface* uppercase;
-	SDL_Surface* lowercase;
-	SDL_Surface* symbol;
-	std::array<SDL_Surface*, 62> soloL;
-	//SDL_Surface* text2;
-	//SDL_Surface* text3;
-	//SDL_Surface* text4;
-	//SDL_Surface* text5;
-	//SDL_Surface* text6;
-	//SDL_Surface* text7;
-	//SDL_Surface* text8;
-	//SDL_Surface* text9;
-	//SDL_Surface* text0;
-	TTF_Font* font;
-	SDL_Color  textColour;
-	SDL_Texture* finished;
-	SDL_Texture* numberTexture;
-	SDL_Texture* uppercaseTexture;
-	SDL_Texture* lowercaseTexture;
-	SDL_Texture* symbolTexture;
+	std::string				text;
+	std::vector<int>		minY;
+	std::vector<int>		maxY;
+	std::vector<int>		minX;
+	std::vector<int>		maxX;
 	std::array<SDL_Texture*, 62> soloTexture;
 	std::string numbers;
 	std::string lowercases;
@@ -60,10 +41,10 @@ protected:
 	std::vector<SDL_Rect*> letterSource;
 	int perfTest;
 	bool textureOpened;
-	std::array<int, 62> minY;
-	std::array<int, 62> maxY;
-	std::array<int, 62> minX;
-	std::array<int, 62> maxX;
+	//std::array<int, 62> minY;
+	//std::array<int, 62> maxY;
+	//std::array<int, 62> minX;
+	//std::array<int, 62> maxX;
 	std::array<int, 62> advance;
 	std::array<int, 62> minY2;
 	std::array<int, 62> maxY2;
@@ -75,16 +56,14 @@ protected:
 	int lettersChecked;
 	int i, j, k, n;
 public:
-	static Text* getText();
 	Text();
 	Text(SDL_Renderer* renderer, std::string Text);
-	Text(SDL_Renderer* renderer, std::string Font, int fontSize, int test);
+	Text(SDL_Renderer* renderer, std::string Text, std::string font);
+	Text(SDL_Renderer* renderer, std::string Text, std::string font, std::string textType);
+	Text(SDL_Renderer* renderer, std::string Text, std::string font, std::string textType, int fontSize);
+	Text(SDL_Renderer* renderer, std::string Text, std::string font, std::string textType, int fontSize, int r, int g, int b);
 	~Text();
-	void newText(SDL_Renderer* renderer, std::string Font, int fontSize, int test);
-	SDL_Texture* showText(std::string Text, SDL_Renderer* renderer);
 	SDL_Texture* getTexture();
-	void setText(SDL_Renderer* renderer, std::string Text);
-	int getI();
 	SDL_Rect* getRect();
 	SDL_Rect* getRect2();
 	SDL_Rect* getRect3();

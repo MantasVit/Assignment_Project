@@ -18,6 +18,7 @@ protected:
 	GameObject* axe;
 	Camera mainCamera;
 	WorldSpace* mine;
+	Text*	testText;
 	/*Text* myText;
 	Text* myText2;
 	Text* myText3;

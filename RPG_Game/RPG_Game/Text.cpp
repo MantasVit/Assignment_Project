@@ -1,263 +1,140 @@
 #include "Text.h"
 
-Text* Text::TextPointer = nullptr;
-
 Text::Text(){
-	/*TTF_Init();
-	if( TTF_Init() == -1 )
-    {
-        std::cout<<"no";    
-    }
-	font = TTF_OpenFont("OpenSans-Regular.ttf", 14);
-	textColour = {0, 0, 0};
-	//text = TTF_RenderText_Solid(font, "TEST", textColour);
-	textSheet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-+_=/\<>?:;@'#~[{]}()!£$%^&";*/
-	textureOpened = false;
-	w2 = 0;
 }
 
 Text::Text(SDL_Renderer* renderer, std::string Text){
-	TTF_Init();
-	if (TTF_Init() == -1)
-	{
-		std::cout << "no";
+	text = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	TTF::useTTF()->addText(renderer, "fonts\\OpenSans-Regular.ttf", text, 16, 0, 0, 0);
+	TTF::useTTF()->getLetterPositions(text, minY, maxY, maxX);
+	for(int i = 0; i < text.size(); i++){
+		if(i == 0){
+			minX.at(i) = 0;
+		}
+		else{
+			minX.at(i) = maxX.at(i-1);
+		}
 	}
-	all = "0123456789";
-	numbers = "1234567890";
-	lowercases = "abcdefghijklmnopqrstuvwxyz";
-	uppercases = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	symbols = "-+_=*/\<>?:;@'#~[{]}()!£$%^&";
-	font = TTF_OpenFont("fonts\\OpenSans-Regular.ttf", 1000);
-	textColour = {0, 0, 0};
-	text = TTF_RenderText_Solid(font, Text.c_str(), textColour);
-	number = TTF_RenderText_Solid(font, numbers.c_str(), textColour);
-	lowercase = TTF_RenderText_Solid(font, lowercases.c_str(), textColour);
-	uppercase = TTF_RenderText_Solid(font, uppercases.c_str(), textColour);
-	symbol = TTF_RenderText_Solid(font, symbols.c_str(), textColour);
-	finished = SDL_CreateTextureFromSurface(renderer, text);
-	numberTexture = SDL_CreateTextureFromSurface(renderer, number);
-	lowercaseTexture = SDL_CreateTextureFromSurface(renderer, lowercase);
-	uppercaseTexture = SDL_CreateTextureFromSurface(renderer, uppercase);
-	symbolTexture = SDL_CreateTextureFromSurface(renderer, symbol);
 }
 
-Text::Text(SDL_Renderer* renderer, std::string Font, int fontSize, int test){
-	perfTest = test;
-	if(perfTest == 1){
-		TTF_Init();
-		if (TTF_Init() == -1)
-		{
-			std::cout<<"no";
+Text::Text(SDL_Renderer* renderer, std::string Text, std::string font){
+	text = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	TTF::useTTF()->addText(renderer, font, text, 16, 0, 0, 0);
+	TTF::useTTF()->getLetterPositions(text, minY, maxY, maxX);
+	for(int i = 0; i < text.size(); i++){
+		if(i == 0){
+			minX.at(i) = 0;
 		}
-		if(finished == nullptr){
-			all = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-			font = TTF_OpenFont(Font.c_str(), fontSize);
-			textColour = {0, 0, 0};
-			text = TTF_RenderText_Solid(font, all.c_str(), textColour);
-			finished = SDL_CreateTextureFromSurface(renderer, text);
-			for(int i = 0; i < all.size(); i++){
-				//TTF_GlyphMetrics(font, all.at(i), &minX.at(i), &maxX.at(i), &minY.at(i), &maxY.at(i), nullptr);
-			}
-			//SDL_QueryTexture(finished, NULL, NULL, &w, &h);
+		else{
+			minX.at(i) = maxX.at(i-1);
 		}
 	}
-	else if(perfTest == 2){
-		TTF_Init();
-		if (TTF_Init() == -1)
-		{
-			std::cout<<"no";
-		}
-		if(numberTexture||lowercaseTexture||uppercaseTexture == nullptr){
-			numbers = "1234567890";
-			lowercases = "abcdefghijklmnopqrstuvwxyz";
-			uppercases = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-			//symbols = "-+_=*/\<>?:;@'#~[{]}()!£$%^&";
-			font = TTF_OpenFont(Font.c_str(), fontSize);
-			textColour = {0, 0, 0};
-			number = TTF_RenderText_Solid(font, numbers.c_str(), textColour);
-			lowercase = TTF_RenderText_Solid(font, lowercases.c_str(), textColour);
-			uppercase = TTF_RenderText_Solid(font, uppercases.c_str(), textColour);
-			//symbol = TTF_RenderText_Solid(font, symbols.c_str(), textColour);
-			numberTexture = SDL_CreateTextureFromSurface(renderer, number);
-			lowercaseTexture = SDL_CreateTextureFromSurface(renderer, lowercase);
-			uppercaseTexture = SDL_CreateTextureFromSurface(renderer, uppercase);
-			//symbolTexture = SDL_CreateTextureFromSurface(renderer, symbol);
-			SDL_QueryTexture(numberTexture, NULL, NULL, &w, &h);
-			SDL_QueryTexture(lowercaseTexture, NULL, NULL, &w, &h);
-			SDL_QueryTexture(uppercaseTexture, NULL, NULL, &w, &h);
-			//SDL_QueryTexture(finished, NULL, NULL, &w, &h);
-		}
-	}
-	else if(perfTest == 3){
-		TTF_Init();
-		if (TTF_Init() == -1)
-		{
-			std::cout<<"no";
-		}
-		if(soloTexture.at(0) == nullptr){
-			soloLetter = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
-							'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
-							'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
-			font = TTF_OpenFont(Font.c_str(), fontSize);
-			textColour = {0, 0, 0};
-			for(int i = 0; i < (soloL.size() - 61); i++){
-				soloL.at(i) = TTF_RenderText_Solid(font, &soloLetter.at(i), textColour);
+}
+
+Text::Text(SDL_Renderer* renderer, std::string Text, std::string font, std::string textType){
+	if(textType == "static"){
+		text = Text;
+		TTF::useTTF()->addText(renderer, font, text, 16, 0, 0, 0);
+		TTF::useTTF()->getLetterPositions(text, minY, maxY, maxX);
+		for(int i = 0; i < text.size(); i++){
+			if(i == 0){
+				minX.at(i) = 0;
 			}
-			for(int i = 0; i < soloTexture.size(); i++){
-				soloTexture.at(i) = SDL_CreateTextureFromSurface(renderer, soloL.at(i));
-			}
-			for(int i = 0; i < soloTexture.size(); i++){
-				SDL_QueryTexture(soloTexture.at(i), NULL, NULL, &w, &h);
+			else{
+				minX.at(i) = maxX.at(i-1);
 			}
 		}
 	}
-	//text1 = TTF_RenderText_Solid(font, "1234567890", textColour);
-	//text2 = TTF_RenderText_Solid(font, "2", textColour);
-	//text3 = TTF_RenderText_Solid(font, "3", textColour);
-	//text4 = TTF_RenderText_Solid(font, "4", textColour);
-	//text5 = TTF_RenderText_Solid(font, "5", textColour);
-	//text6 = TTF_RenderText_Solid(font, "6", textColour);
-	//text7 = TTF_RenderText_Solid(font, "7", textColour);
-	//text8 = TTF_RenderText_Solid(font, "8", textColour);
-	//text9 = TTF_RenderText_Solid(font, "9", textColour);
-	//text0 = TTF_RenderText_Solid(font, "0", textColour);
+	if(textType == "dynamic"){
+		text = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+		TTF::useTTF()->addText(renderer, font, text, 16, 0, 0, 0);
+		TTF::useTTF()->getLetterPositions(text, minY, maxY, maxX);
+		for(int i = 0; i < text.size(); i++){
+			if(i == 0){
+				minX.at(i) = 0;
+			}
+			else{
+				minX.at(i) = maxX.at(i-1);
+			}
+		}
+	}
+}
+
+Text::Text(SDL_Renderer* renderer, std::string Text, std::string font, std::string textType, int fontSize){
+	if(textType == "static"){
+		text = Text;
+		TTF::useTTF()->addText(renderer, font, text, fontSize, 0, 0, 0);
+		TTF::useTTF()->getLetterPositions(text, minY, maxY, maxX);
+		for(int i = 0; i < text.size(); i++){
+			if(i == 0){
+				minX.at(i) = 0;
+			}
+			else{
+				minX.at(i) = maxX.at(i-1);
+			}
+		}
+	}
+	if(textType == "dynamic"){
+		text = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+		TTF::useTTF()->addText(renderer, font, text, fontSize, 0, 0, 0);
+		TTF::useTTF()->getLetterPositions(text, minY, maxY, maxX);
+		for(int i = 0; i < text.size(); i++){
+			if(i == 0){
+				minX.at(i) = 0;
+			}
+			else{
+				minX.at(i) = maxX.at(i-1);
+			}
+		}
+	}
+}
+
+Text::Text(SDL_Renderer* renderer, std::string Text, std::string font, std::string textType, int fontSize, int r, int g, int b){
+	std::cout<<"text"<<std::endl;
+	if(textType == "static"){
+		std::cout<<"?????????????"<<std::endl;
+		text = Text;
+		//TTF::useTTF()->addText(renderer, font, text, fontSize, r, g, b);
+		//TTF::useTTF()->getLetterPositions(text, minY, maxY, maxX);
+		/*for(int i = 0; i < text.size(); i++){
+			if(i == 0){
+				minX.at(i) = 0;
+			}
+			else{
+				minX.at(i) = maxX.at(i-1);
+			}
+		}*/
+	}
+	std::cout<<"?????????????"<<std::endl;
+	if(textType == "dynamic"){
+		std::cout<<"?????????????"<<std::endl;
+		text = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+		TTF::useTTF()->addText(renderer, font, text, fontSize, r, g, b);
+		//TTF::useTTF()->getLetterPositions(text, minY, maxY, maxX);
+		for(int i = 0; i < text.size(); i++){
+			std::cout<<"for loop"<<std::endl;
+			if(i == 0){
+				std::cout<<"1 = 0"<<std::endl;
+				minX.at(0) = 0;
+			}
+			else if(i >= 1){
+				std::cout<<"else"<<std::endl;
+				minX.at(i) = maxX.at(i-1);
+			}
+		}
+	}
 }
 
 Text::~Text()
 {
 }
 
-Text* Text::getText(){
-	if(TextPointer == nullptr){
-		TextPointer = new Text();
-		return TextPointer;
-	}
-	return TextPointer;
-}
-
-void Text::newText(SDL_Renderer* renderer, std::string Font, int fontSize, int test){
-	perfTest = test;
-	if(perfTest == 1){
-		TTF_Init();
-		if (TTF_Init() == -1)
-		{
-			std::cout<<"no";
-		}
-		if(textureOpened == false){
-			all = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-			font = TTF_OpenFont(Font.c_str(), fontSize);
-			textColour = {0, 0, 0};
-			text = TTF_RenderText_Solid(font, all.c_str(), textColour);
-			finished = SDL_CreateTextureFromSurface(renderer, text);
-			for(int i = 0; i < all.size(); i++){
-				TTF_GlyphMetrics(font, all.at(i), &minX2.at(i), &maxX2.at(i), &minY2.at(i), &maxY2.at(i), &advance2.at(i));
-				w2 = w2 + advance2.at(i);
-				if(i == 0){
-					maxX.at(i) = advance2.at(i);
-					minX.at(i) = maxX.at(i) - advance2.at(i);
-				}
-				else{
-					maxX.at(i) = maxX.at(i-1) + advance2.at(i);
-					minX.at(i) = maxX.at(i) - advance2.at(i);
-				}
-			}
-			SDL_QueryTexture(finished, NULL, NULL, &w, &h);
-			textureOpened = true;
-		}
-	}
-	if(perfTest == 2){
-		TTF_Init();
-		if (TTF_Init() == -1)
-		{
-			std::cout<<"no";
-		}
-		if(textureOpened == false){
-			numbers = "1234567890";
-			lowercases = "abcdefghijklmnopqrstuvwxyz";
-			uppercases = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-			//symbols = "-+_=*/\<>?:;@'#~[{]}()!£$%^&";
-			font = TTF_OpenFont(Font.c_str(), fontSize);
-			textColour = {0, 0, 0};
-			number = TTF_RenderText_Solid(font, numbers.c_str(), textColour);
-			lowercase = TTF_RenderText_Solid(font, lowercases.c_str(), textColour);
-			uppercase = TTF_RenderText_Solid(font, uppercases.c_str(), textColour);
-			//symbol = TTF_RenderText_Solid(font, symbols.c_str(), textColour);
-			numberTexture = SDL_CreateTextureFromSurface(renderer, number);
-			lowercaseTexture = SDL_CreateTextureFromSurface(renderer, lowercase);
-			uppercaseTexture = SDL_CreateTextureFromSurface(renderer, uppercase);
-			//symbolTexture = SDL_CreateTextureFromSurface(renderer, symbol);
-			SDL_QueryTexture(numberTexture, NULL, NULL, &w, &h);
-			SDL_QueryTexture(lowercaseTexture, NULL, NULL, &w, &h);
-			SDL_QueryTexture(uppercaseTexture, NULL, NULL, &w, &h);
-			//SDL_QueryTexture(finished, NULL, NULL, &w, &h);
-			textureOpened = true;
-		}
-	}
-	else if(perfTest == 3){
-		TTF_Init();
-		if (TTF_Init() == -1)
-		{
-			std::cout<<"no";
-		}
-		if(textureOpened == false){
-			soloLetter = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
-							'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
-							'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
-			font = TTF_OpenFont(Font.c_str(), fontSize);
-			textColour = {0, 0, 0};
-			for(int i = 0; i < (soloL.size() - 61); i++){
-				soloL.at(i) = TTF_RenderText_Solid(font, &soloLetter.at(i), textColour);
-			}
-			for(int i = 0; i < soloTexture.size(); i++){
-				soloTexture.at(i) = SDL_CreateTextureFromSurface(renderer, soloL.at(i));
-			}
-			for(int i = 0; i < soloTexture.size(); i++){
-				SDL_QueryTexture(soloTexture.at(i), NULL, NULL, &w, &h);
-			}
-			textureOpened = true;
-		}
-	}
-	//text1 = TTF_RenderText_Solid(font, "1234567890", textColour);
-	//text2 = TTF_RenderText_Solid(font, "2", textColour);
-	//text3 = TTF_RenderText_Solid(font, "3", textColour);
-	//text4 = TTF_RenderText_Solid(font, "4", textColour);
-	//text5 = TTF_RenderText_Solid(font, "5", textColour);
-	//text6 = TTF_RenderText_Solid(font, "6", textColour);
-	//text7 = TTF_RenderText_Solid(font, "7", textColour);
-	//text8 = TTF_RenderText_Solid(font, "8", textColour);
-	//text9 = TTF_RenderText_Solid(font, "9", textColour);
-	//text0 = TTF_RenderText_Solid(font, "0", textColour);
-}
-
-SDL_Texture* Text::showText(std::string Text, SDL_Renderer* renderer){
-	return finished;
-}
-
 SDL_Texture* Text::getTexture(){
-	if(perfTest == 1){
-		return finished;
-	}
-
-}
-
-void Text::setText(SDL_Renderer* renderer, std::string Text){
-	//std::string test;
-	//test = Text;
-
-	SDL_FreeSurface(text);
-	SDL_DestroyTexture(finished);
-	text = TTF_RenderText_Solid(font, all.c_str(), textColour);
-	finished = SDL_CreateTextureFromSurface(renderer, text);
-	//SDL_FreeSurface(text);
-	//std::cout<<test<<std::endl;
-}
-
-int Text::getI() {
-	return ij;
+	return TTF::useTTF()->getTexture(text);
 }
 
 SDL_Rect* Text::getRect() {
-	SDL_QueryTexture(finished, NULL, NULL, &w, &h);
+	//SDL_QueryTexture(finished, NULL, NULL, &w, &h);
 	FPS::useFPS()->update();
 	for (int i = 0; i < all.size(); i++) {
 		for (int j = 0; j < FPS::useFPS()->update().size(); j++) {

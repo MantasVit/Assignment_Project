@@ -166,6 +166,7 @@
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="Text.cpp" />
     <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="TTF.cpp" />
     <ClCompile Include="Vector2D.cpp" />
     <ClCompile Include="WorldSpace.cpp" />
   </ItemGroup>
@@ -184,6 +185,7 @@
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="Text.h" />
     <ClInclude Include="Texture.h" />
+    <ClInclude Include="TTF.h" />
     <ClInclude Include="Vector2D.h" />
     <ClInclude Include="WorldSpace.h" />
   </ItemGroup>

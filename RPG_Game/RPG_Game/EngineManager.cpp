@@ -27,7 +27,8 @@ void EngineManager::createWindow(std::string gameTitle, int resolutionWidth, int
 	mainCamera.setCameraX(mine->getXCoordinates() / 2);
 	mainCamera.setCameraY(mine->getYCoordinates() / 2);
 	//myText->showText("lolktest", Renderer::useRenderer()->getRenderer());
-	Text::getText()->newText(Renderer::useRenderer()->getRenderer(), "fonts\\OpenSans-Regular.ttf", 100, 1);
+	testText = new Text(Renderer::useRenderer()->getRenderer(), "sw", "OpenSans-Regular", "dynamic", 100, 1, 1, 1);
+	//Text::getText()->newText(Renderer::useRenderer()->getRenderer(), "fonts\\OpenSans-Regular.ttf", 100, 1);
 	//Text::getText()->newText(Renderer::useRenderer()->getRenderer(), "fonts\\OpenSans-Regular.ttf", 1000, 1);
 	//Text::getText()->newText(Renderer::useRenderer()->getRenderer(), "fonts\\OpenSans-Regular.ttf", 1000, 1);
 	//Text::getText()->newText(Renderer::useRenderer()->getRenderer(), "fonts\\OpenSans-Regular.ttf", 1000, 1);
@@ -82,7 +83,7 @@ void EngineManager::update(){
 	for(int i = 0; i < GameDatabase::useDatabase()->getSize(); i++){
 		Renderer::useRenderer()->renderTexture(Renderer::useRenderer()->getRenderer(), GameDatabase::useDatabase()->getList().at(i)->getTexture(), NULL, GameDatabase::useDatabase()->getList().at(i)->getRect());
 	}
-	Text::getText()->outputText(FPS::useFPS()->update());
+	testText->outputText(FPS::useFPS()->update());
 	//Text::getText()->setText(Renderer::useRenderer()->getRenderer(), FPS::useFPS()->update());
 	/*myText2->outputText(FPS::useFPS()->update());
 	//myText2->setText(Renderer::useRenderer()->getRenderer(), FPS::useFPS()->update());
@@ -142,8 +143,8 @@ void EngineManager::update(){
 	//myText29->setText(Renderer::useRenderer()->getRenderer(), FPS::useFPS()->update());
 	myText30->outputText(FPS::useFPS()->update());*/
 	//myText30->setText(Renderer::useRenderer()->getRenderer(), FPS::useFPS()->update());
-	for (int i = 0; i < Text::getText()->getLetter().size(); i++) {
-		Renderer::useRenderer()->renderTexture(Renderer::useRenderer()->getRenderer(), Text::getText()->getTexture(), Text::getText()->getLetterSourceRect(i), Text::getText()->getLetterRect(i));
+	for (int i = 0; i < testText->getLetter().size(); i++) {
+		Renderer::useRenderer()->renderTexture(Renderer::useRenderer()->getRenderer(), testText->getTexture(), testText->getLetterSourceRect(i), testText->getLetterRect(i));
 	}
 	
 	//Renderer::useRenderer()->renderTexture(Renderer::useRenderer()->getRenderer(), myText->getTexture(), myText->getRect_3(), myText->getRect2());

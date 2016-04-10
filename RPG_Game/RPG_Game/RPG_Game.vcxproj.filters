@@ -72,6 +72,9 @@
     <ClCompile Include="FPS.cpp">
       <Filter>MSEngine\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TTF.cpp">
+      <Filter>MSEngine\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h">
@@ -120,6 +123,9 @@
       <Filter>MSEngine\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FPS.h">
+      <Filter>MSEngine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TTF.h">
       <Filter>MSEngine\Header Files</Filter>
     </ClInclude>
   </ItemGroup>

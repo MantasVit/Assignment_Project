@@ -25,10 +25,18 @@ void GameDatabase::addObject(GameObject* object){
 	objectList.push_back(object);
 }
 
+void GameDatabase::addTexture(Texture* texture){
+	textureList.push_back(texture);
+}
+
 std::vector<GameObject*> GameDatabase::getList(){
 	return objectList;
 }
 
+//std::vector<Texture*> GameDatabase::getList(){
+	//return textureList;
+//}
+
 int GameDatabase::getSize(){
-	return objectList.size();
+		return objectList.size();
 }
