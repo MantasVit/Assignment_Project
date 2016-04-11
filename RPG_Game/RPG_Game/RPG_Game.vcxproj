@@ -152,6 +152,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BaseArmour.cpp" />
+    <ClCompile Include="BaseItem.cpp" />
+    <ClCompile Include="BaseWeapon.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Controller.cpp" />
     <ClCompile Include="EngineManager.cpp" />
@@ -171,6 +174,9 @@
     <ClCompile Include="WorldSpace.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BaseArmour.h" />
+    <ClInclude Include="BaseItem.h" />
+    <ClInclude Include="BaseWeapon.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Controller.h" />
     <ClInclude Include="EngineManager.h" />
