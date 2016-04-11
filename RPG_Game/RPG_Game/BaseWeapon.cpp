@@ -2,9 +2,9 @@
 
 
 
-BaseWeapon::BaseWeapon()
-{
-}
+//BaseWeapon::BaseWeapon()
+//{
+//}
 
 
 BaseWeapon::~BaseWeapon()

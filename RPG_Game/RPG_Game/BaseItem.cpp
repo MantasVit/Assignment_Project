@@ -7,10 +7,10 @@ BaseItem::BaseItem()
 	price = 0;
 }
 
-BaseItem::BaseItem(int Price) {
+/*BaseItem::BaseItem(int Price) {
 	price = Price;
-}
+}*/
 
-BaseItem::~BaseItem()
+/*BaseItem::~BaseItem()
 {
-}
+}*/

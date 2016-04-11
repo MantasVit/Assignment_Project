@@ -2,9 +2,9 @@
 
 
 
-BaseArmour::BaseArmour()
-{
-}
+//BaseArmour::BaseArmour()
+//{
+//}
 
 
 BaseArmour::~BaseArmour()
