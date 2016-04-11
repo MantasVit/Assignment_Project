@@ -115,12 +115,12 @@ Text::Text(SDL_Renderer* renderer, std::string Text, std::string font, std::stri
 			std::cout<<"for loop"<<std::endl;
 			if(i == 0){
 				std::cout<<"1 = 0"<<std::endl;
-				minX.at(0) = 0;
+				//minX.at(0) = 0;
 			}
-			else if(i >= 1){
+			/*else if(i >= 1){
 				std::cout<<"else"<<std::endl;
 				minX.at(i) = maxX.at(i-1);
-			}
+			}*/
 		}
 	}
 }

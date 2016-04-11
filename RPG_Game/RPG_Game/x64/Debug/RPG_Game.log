@@ -1,12 +1,4 @@
-﻿  WorldSpace.cpp
-  Vector2D.cpp
-c:\users\40010931\source\repos\assignment_project\rpg_game\rpg_game\vector2d.cpp(18): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-c:\users\40010931\source\repos\assignment_project\rpg_game\rpg_game\vector2d.cpp(21): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-c:\users\40010931\source\repos\assignment_project\rpg_game\rpg_game\vector2d.cpp(22): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-  TTF.cpp
-c1xx : fatal error C1083: Cannot open source file: 'TTF.cpp': No such file or directory
-  Texture.cpp
-  Text.cpp
+﻿  Text.cpp
 c:\users\40010931\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(164): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
 c:\users\40010931\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(166): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
 c:\users\40010931\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(167): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
@@ -16,22 +8,8 @@ c:\users\40010931\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(185
 c:\users\40010931\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(200): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
 c:\users\40010931\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(202): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
 c:\users\40010931\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(203): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-  Renderer.cpp
-  ObjectBase.cpp
-  Matrix2D.cpp
-  main.cpp
-  item.cpp
-  GameObject.cpp
-  GameManager.cpp
-  GameDatabase.cpp
-c:\users\40010931\source\repos\assignment_project\rpg_game\rpg_game\gamedatabase.cpp(41): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  FPS.cpp
-  EngineManager.cpp
-  Controller.cpp
-  Camera.cpp
-  Generating Code...
-c:\users\40010931\source\repos\assignment_project\rpg_game\rpg_game\controller.cpp(25): warning C4715: 'Controller::checkKey': not all control paths return a value
 c:\users\40010931\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(156): warning C4715: 'Text::getRect': not all control paths return a value
 c:\users\40010931\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(174): warning C4715: 'Text::getRect2': not all control paths return a value
 c:\users\40010931\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(192): warning C4715: 'Text::getRect3': not all control paths return a value
 c:\users\40010931\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(210): warning C4715: 'Text::getRect4': not all control paths return a value
+  RPG_Game.vcxproj -> C:\Users\40010931\Source\Repos\Assignment_Project\RPG_Game\x64\Debug\RPG_Game.exe

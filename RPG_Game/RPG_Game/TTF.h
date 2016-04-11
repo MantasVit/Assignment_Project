@@ -8,11 +8,16 @@
 
 class TTF{
 protected:
-	static TTF*					ttfPointer;
-	std::map<int, TTF_Font*>	fontList;
-	std::vector<SDL_Surface*>	surfaceList;
-	std::vector<SDL_Texture*>	textureList;
-	std::vector<bool>			fontCheckList;
+	static TTF*							ttfPointer;
+	std::map<int, TTF_Font*>			fontList;
+	std::map<int, TTF_Font*>::iterator	fontFinder;
+	TTF_Font*							tempFont;
+	std::vector<SDL_Surface*>			surfaceList;
+	SDL_Surface*						tempSurface;
+	std::vector<SDL_Texture*>			textureList;
+	SDL_Texture*						tempTexture;
+	std::vector<bool>					fontCheckList;
+	SDL_Color							textColour;
 public:
 	TTF();
 	~TTF();
