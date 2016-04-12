@@ -118,8 +118,8 @@ Text::Text(SDL_Renderer* renderer, std::string Text, std::string font, std::stri
 				minX.push_back(0);
 			}
 			else if(i >= 1){
-				std::cout<<minX.at(i)<<std::endl;
-				std::cout<<maxX.at(i)<<std::endl;
+				//std::cout<<minX.at(i)<<std::endl;
+				//std::cout<<maxX.at(i)<<std::endl;
 				//minX.push_back(maxX.at(i-1));
 			}
 		}

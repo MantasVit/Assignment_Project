@@ -1,2 +1,15 @@
-﻿  BaseItem.cpp
-  RPG_Game.vcxproj -> C:\Users\40010931\Source\Repo\Assignment_Project\RPG_Game\x64\Debug\RPG_Game.exe
+﻿  Text.cpp
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(165): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(167): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(168): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(183): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(185): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(186): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(201): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(203): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(204): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(157): warning C4715: 'Text::getRect': not all control paths return a value
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(175): warning C4715: 'Text::getRect2': not all control paths return a value
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(193): warning C4715: 'Text::getRect3': not all control paths return a value
+c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\text.cpp(211): warning C4715: 'Text::getRect4': not all control paths return a value
+  RPG_Game.vcxproj -> C:\Users\Mantas\Source\Repos\Assignment_Project\RPG_Game\x64\Debug\RPG_Game.exe
