@@ -9,10 +9,14 @@
 class Text{
 protected:
 	std::string				text;
+	std::string Font;
+	int FontSize;
 	std::vector<int>		minY;
 	std::vector<int>		maxY;
 	std::vector<int>		minX;
 	std::vector<int>		maxX;
+	std::vector<int>		maxX2;
+	int	x3, y3;
 	std::array<SDL_Texture*, 62> soloTexture;
 	std::string numbers;
 	std::string lowercases;
@@ -48,8 +52,8 @@ protected:
 	std::array<int, 62> advance;
 	std::array<int, 62> minY2;
 	std::array<int, 62> maxY2;
-	std::array<int, 62> minX2;
-	std::array<int, 62> maxX2;
+	//std::array<int, 62> minX2;
+	//std::array<int, 62> maxX2;
 	std::array<int, 62> advance2;
 	int w2, h2;
 	bool letterChecked;
@@ -61,7 +65,7 @@ public:
 	Text(SDL_Renderer* renderer, std::string Text, std::string font);
 	Text(SDL_Renderer* renderer, std::string Text, std::string font, std::string textType);
 	Text(SDL_Renderer* renderer, std::string Text, std::string font, std::string textType, int fontSize);
-	Text(SDL_Renderer* renderer, std::string Text, std::string font, std::string textType, int fontSize, int r, int g, int b);
+	Text(SDL_Renderer* renderer, std::string Text, std::string font, std::string textType, int fontSize, int r, int g, int b, int x, int y);
 	~Text();
 	SDL_Texture* getTexture();
 	SDL_Rect* getRect();

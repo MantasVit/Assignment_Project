@@ -19,6 +19,13 @@ protected:
 	Camera mainCamera;
 	WorldSpace* mine;
 	Text*	testText;
+	Text*	testText2;
+	Text*	testText3;
+	Text*	testText4;
+	Text*	testText5;
+	Text*	testText6;
+	Text*	testText7;
+	Text*	testText8;
 	/*Text* myText;
 	Text* myText2;
 	Text* myText3;
