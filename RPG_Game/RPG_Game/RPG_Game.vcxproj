@@ -157,6 +157,7 @@
     <ClCompile Include="BaseWeapon.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Controller.cpp" />
+    <ClCompile Include="controls.cpp" />
     <ClCompile Include="EngineManager.cpp" />
     <ClCompile Include="FPS.cpp" />
     <ClCompile Include="GameDatabase.cpp" />
@@ -179,6 +180,7 @@
     <ClInclude Include="BaseWeapon.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Controller.h" />
+    <ClInclude Include="controls.h" />
     <ClInclude Include="EngineManager.h" />
     <ClInclude Include="FPS.h" />
     <ClInclude Include="GameDatabase.h" />

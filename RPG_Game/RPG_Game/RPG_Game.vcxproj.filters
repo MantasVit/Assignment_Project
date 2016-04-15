@@ -22,6 +22,15 @@
     <Filter Include="MSEngine\Source Files">
       <UniqueIdentifier>{c4881af2-f03d-4440-aeda-4b4c1dce49e1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Dawid">
+      <UniqueIdentifier>{26b97123-8490-42f5-8bd9-3338e397ba77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dawid\Headers">
+      <UniqueIdentifier>{fd42ad12-979c-418c-9403-5cfb4d8317b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dawid\Sources">
+      <UniqueIdentifier>{d489b219-eb49-4a25-ba30-faef522a7b8f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -84,6 +93,9 @@
     <ClCompile Include="BaseWeapon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="controls.cpp">
+      <Filter>Dawid\Sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h">
@@ -145,6 +157,9 @@
     </ClInclude>
     <ClInclude Include="BaseItem.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="controls.h">
+      <Filter>Dawid\Headers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
