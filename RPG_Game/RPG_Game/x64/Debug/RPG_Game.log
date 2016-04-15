@@ -1,4 +1,2 @@
-﻿  TTF.cpp
-c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\ttf.cpp(60): warning C4715: 'TTF::getFont': not all control paths return a value
-c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\ttf.cpp(67): warning C4715: 'TTF::getTexture': not all control paths return a value
-  RPG_Game.vcxproj -> C:\Users\Mantas\Source\Repos\Assignment_Project\RPG_Game\x64\Debug\RPG_Game.exe
+﻿  EngineManager.cpp
+  RPG_Game.vcxproj -> C:\Users\40010931\Source\Repo\Assignment_Project\RPG_Game\x64\Debug\RPG_Game.exe

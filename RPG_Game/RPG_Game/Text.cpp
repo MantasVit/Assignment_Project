@@ -320,7 +320,7 @@ void Text::outputText(std::string Text) {
 					//letter.at(k)->w = w2;
 					//letter.at(k)->x = 0;
 					//letter.at(k)->y = 0;
-					letter.at(k)->h = maxY.at(i) + 50;
+					letter.at(k)->h = h2;
 					letter.at(k)->w = maxX2.at(i);
 					letter.at(k)->x = x3 + letter.at(k)->w * k;
 					letter.at(k)->y = y3;

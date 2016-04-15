@@ -7,7 +7,7 @@
 
 class GameObject: public ObjectBase{
 protected:
-
+	SDL_Rect			hitbox;
 public:
 	GameObject();
 	~GameObject();

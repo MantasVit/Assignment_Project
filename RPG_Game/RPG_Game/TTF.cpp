@@ -19,13 +19,26 @@ void TTF::addText(SDL_Renderer* renderer, std::string font, std::string text, in
 	tempFont = TTF_OpenFont(("fonts\\"+font+".ttf").c_str(), fontSize);
 	tempSurface = TTF_RenderText_Solid(tempFont, text.c_str(), textColour);
 	tempTexture = SDL_CreateTextureFromSurface(renderer, tempSurface);
-	test.insert(std::pair<int, TTF_Font*>(fontSize, tempFont));
-	test2.insert(std::pair<int, SDL_Texture*>(fontSize, tempTexture));
-	//fontList.insert(std::make_pair(std::pair<std::string, int>(font, fontSize), tempFont));
-	fontFinder = fontList.insert(std::make_pair(std::pair<std::string, int>(font, fontSize), tempFont));
-	//textureList.insert(std::make_pair(std::pair<std::pair<std::string, std::string>, int>(std::pair<std::string, std::string>(text, font), fontSize), tempTexture));
-	textureFinder = textureList.insert(std::make_pair(std::pair<std::pair<std::string, std::string>, int>(std::pair<std::string, std::string>(text, font), fontSize), tempTexture));
-	if(fontFinder.second == true){
+	//test.insert(std::pair<int, TTF_Font*>(fontSize, tempFont));
+	//test2.insert(std::pair<int, SDL_Texture*>(fontSize, tempTexture));
+	fontIt2 = fontList.find(std::pair<std::string, int>(font, fontSize));
+	if(fontIt2 == fontList.end()){
+		fontList.insert(std::make_pair(std::pair<std::string, int>(font, fontSize), tempFont));
+		std::cout<<"font created"<<std::endl;
+	}
+	if(fontIt2 != fontList.end()){
+		std::cout<<"font exists"<<std::endl;
+	}
+	textureIt2 = textureList.find(std::pair<std::pair<std::string, std::string>, int>(std::pair<std::string, std::string>(text, font), fontSize));
+	if(textureIt2 == textureList.end()){
+		textureList.insert(std::make_pair(std::pair<std::pair<std::string, std::string>, int>(std::pair<std::string, std::string>(text, font), fontSize), tempTexture));
+		std::cout<<"texture created"<<std::endl;
+	}
+	if(textureIt2 != textureList.end()){
+		std::cout<<"texture exists"<<std::endl;
+	}
+	//textureFinder = textureList.insert(std::make_pair(std::pair<std::pair<std::string, std::string>, int>(std::pair<std::string, std::string>(text, font), fontSize), tempTexture));
+	/*if(fontFinder.second == true){
 		std::cout<<"font created"<<std::endl;
 	}
 	if(fontFinder.second == false){
@@ -36,7 +49,7 @@ void TTF::addText(SDL_Renderer* renderer, std::string font, std::string text, in
 	}
 	if(textureFinder.second == false){
 		std::cout<<"texture exists"<<std::endl;
-	}
+	}*/
 	for(fontIt = fontList.begin(); fontIt != fontList.end(); fontIt++){
 		std::cout<<fontIt->first.first<<" "<<fontIt->first.second<<" "<<fontIt->second<<std::endl;
 	}

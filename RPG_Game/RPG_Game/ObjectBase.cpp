@@ -9,8 +9,17 @@ ObjectBase::ObjectBase(){
 	worldLocationY = 0;
 }
 
+ObjectBase::ObjectBase(std::string filename){
+	objectTexture = new Texture(Renderer::useRenderer()->getRenderer(), filename.c_str());
+	SDL_QueryTexture(objectTexture->getTexture(), NULL, NULL, &w, &h);
+	objectRect.w = w;
+	objectRect.h = h;
+	worldLocationX = 0;
+	worldLocationY = 0;
+}
+
 ObjectBase::ObjectBase(std::string filename, int x, int y){
-	objectTexture = new Texture(Renderer::useRenderer()->getRenderer(), "WorldSpace_test.png");
+	objectTexture = new Texture(Renderer::useRenderer()->getRenderer(), filename.c_str());
 	SDL_QueryTexture(objectTexture->getTexture(), NULL, NULL, &w, &h);
 	objectRect.w = w;
 	objectRect.h = h;
@@ -49,7 +58,7 @@ void ObjectBase::setX(int x){
 }
 
 void ObjectBase::setY(int y){
-	objectRect.x = y;
+	objectRect.y = y;
 }
 
 void ObjectBase::updateLocation(Camera* camera){

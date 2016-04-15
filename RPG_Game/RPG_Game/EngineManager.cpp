@@ -27,14 +27,14 @@ void EngineManager::createWindow(std::string gameTitle, int resolutionWidth, int
 	mainCamera.setCameraX(mine->getXCoordinates() / 2);
 	mainCamera.setCameraY(mine->getYCoordinates() / 2);
 	//myText->showText("lolktest", Renderer::useRenderer()->getRenderer());
-	testText = new Text(Renderer::useRenderer()->getRenderer(), FPS::useFPS()->update(), "OpenSans-Regular", "dynamic", 100, 1, 1, 1, 0, 0);
-	testText2 = new Text(Renderer::useRenderer()->getRenderer(), FPS::useFPS()->update(), "OpenSans-Regular", "dynamic", 100, 1, 1, 1, 50, 50);
-	testText3 = new Text(Renderer::useRenderer()->getRenderer(), FPS::useFPS()->update(), "OpenSans-Regular", "dynamic", 100, 1, 1, 1, 100, 100);
-	testText4 = new Text(Renderer::useRenderer()->getRenderer(), FPS::useFPS()->update(), "OpenSans-Regular", "dynamic", 100, 1, 1, 1, 150, 150);
-	testText5 = new Text(Renderer::useRenderer()->getRenderer(), FPS::useFPS()->update(), "OpenSans-Regular", "dynamic", 100, 1, 1, 1, 200, 200);
+	testText = new Text(Renderer::useRenderer()->getRenderer(), FPS::useFPS()->update(), "OpenSans-Regular", "dynamic", 200, 1, 1, 1, 0, 0);
+	/*testText2 = new Text(Renderer::useRenderer()->getRenderer(), FPS::useFPS()->update(), "OpenSans-Regular", "dynamic", 50, 1, 1, 1, 50, 50);
+	testText3 = new Text(Renderer::useRenderer()->getRenderer(), FPS::useFPS()->update(), "OpenSans-Regular", "dynamic", 10, 1, 1, 1, 100, 100);
+	testText4 = new Text(Renderer::useRenderer()->getRenderer(), FPS::useFPS()->update(), "OpenSans-Regular", "dynamic", 150, 1, 1, 1, 150, 150);
+	testText5 = new Text(Renderer::useRenderer()->getRenderer(), FPS::useFPS()->update(), "OpenSans-Regular", "dynamic", 200, 1, 1, 1, 200, 200);
 	testText6 = new Text(Renderer::useRenderer()->getRenderer(), FPS::useFPS()->update(), "OpenSans-Regular", "dynamic", 100, 1, 1, 1, 250, 250);
-	testText7 = new Text(Renderer::useRenderer()->getRenderer(), FPS::useFPS()->update(), "OpenSans-Regular", "dynamic", 100, 1, 1, 1, 300, 300);
-	testText8 = new Text(Renderer::useRenderer()->getRenderer(), FPS::useFPS()->update(), "OpenSans-Regular", "dynamic", 100, 1, 1, 1, 350, 350);
+	testText7 = new Text(Renderer::useRenderer()->getRenderer(), FPS::useFPS()->update(), "OpenSans-Regular", "dynamic", 30, 1, 1, 1, 300, 300);
+	testText8 = new Text(Renderer::useRenderer()->getRenderer(), FPS::useFPS()->update(), "OpenSans-Regular", "dynamic", 70, 1, 1, 1, 350, 350);*/
 	//std::cout<<"---------"<<std::endl;
 	//testText2 = new Text(Renderer::useRenderer()->getRenderer(), "egfsg", "OpenSans-Regular", "dynamic", 100, 1, 1, 1);
 	//Text::getText()->newText(Renderer::useRenderer()->getRenderer(), "fonts\\OpenSans-Regular.ttf", 100, 1);
@@ -93,13 +93,13 @@ void EngineManager::update(){
 		Renderer::useRenderer()->renderTexture(Renderer::useRenderer()->getRenderer(), GameDatabase::useDatabase()->getList().at(i)->getTexture(), NULL, GameDatabase::useDatabase()->getList().at(i)->getRect());
 	}
 	testText->outputText(FPS::useFPS()->update());
-	testText2->outputText(FPS::useFPS()->update());
+	/*testText2->outputText(FPS::useFPS()->update());
 	testText3->outputText(FPS::useFPS()->update());
 	testText4->outputText(FPS::useFPS()->update());
 	testText5->outputText(FPS::useFPS()->update());
 	testText6->outputText(FPS::useFPS()->update());
 	testText7->outputText(FPS::useFPS()->update());
-	testText8->outputText(FPS::useFPS()->update());
+	testText8->outputText(FPS::useFPS()->update());*/
 	//testText2->outputText(FPS::useFPS()->update());
 	//testText->setText(Renderer::useRenderer()->getRenderer(), FPS::useFPS()->update());
 	/*myText2->outputText(FPS::useFPS()->update());
@@ -163,7 +163,7 @@ void EngineManager::update(){
 	for (int i = 0; i < testText->getLetter().size(); i++) {
 		Renderer::useRenderer()->renderTexture(Renderer::useRenderer()->getRenderer(), testText->getTexture(), testText->getLetterSourceRect(i), testText->getLetterRect(i));
 	}
-	for (int i = 0; i < testText2->getLetter().size(); i++) {
+	/*for (int i = 0; i < testText2->getLetter().size(); i++) {
 		Renderer::useRenderer()->renderTexture(Renderer::useRenderer()->getRenderer(), testText2->getTexture(), testText2->getLetterSourceRect(i), testText2->getLetterRect(i));
 	}
 	for (int i = 0; i < testText3->getLetter().size(); i++) {
@@ -183,7 +183,7 @@ void EngineManager::update(){
 	}
 	for (int i = 0; i < testText8->getLetter().size(); i++) {
 		Renderer::useRenderer()->renderTexture(Renderer::useRenderer()->getRenderer(), testText8->getTexture(), testText8->getLetterSourceRect(i), testText8->getLetterRect(i));
-	}
+	}*/
 	//for (int i = 0; i < testText2->getLetter().size(); i++) {
 		//Renderer::useRenderer()->renderTexture(Renderer::useRenderer()->getRenderer(), testText2->getTexture(), testText2->getLetterSourceRect(i), testText2->getLetterRect(i));
 	//}

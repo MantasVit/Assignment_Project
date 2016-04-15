@@ -13,6 +13,7 @@ protected:
 	int			w, h;
 public:
 	ObjectBase();
+	ObjectBase(std::string filename);
 	ObjectBase(std::string filename, int x, int y);
 	~ObjectBase();
 	void setWorldLocationX(int x);
