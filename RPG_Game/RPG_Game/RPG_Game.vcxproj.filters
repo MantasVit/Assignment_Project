@@ -39,9 +39,6 @@
     <ClCompile Include="GameManager.cpp">
       <Filter>MSEngine\Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GameObject.cpp">
-      <Filter>MSEngine\Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="item.cpp">
       <Filter>MSEngine\Source Files</Filter>
     </ClCompile>
@@ -84,6 +81,12 @@
     <ClCompile Include="BaseWeapon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>MSEngine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>MSEngine\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h">
@@ -96,9 +99,6 @@
       <Filter>MSEngine\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GameManager.h">
-      <Filter>MSEngine\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GameObject.h">
       <Filter>MSEngine\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="item.h">
@@ -145,6 +145,12 @@
     </ClInclude>
     <ClInclude Include="BaseItem.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>MSEngine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>MSEngine\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -90,7 +90,7 @@ Camera* EngineManager::getCamera(){
 void EngineManager::update(){
 	Renderer::useRenderer()->clearRenderer(Renderer::useRenderer()->getRenderer());
 	for(int i = 0; i < GameDatabase::useDatabase()->getSize(); i++){
-		Renderer::useRenderer()->renderTexture(Renderer::useRenderer()->getRenderer(), GameDatabase::useDatabase()->getList().at(i)->getTexture(), NULL, GameDatabase::useDatabase()->getList().at(i)->getRect());
+		Renderer::useRenderer()->renderTexture(Renderer::useRenderer()->getRenderer(), GameDatabase::useDatabase()->getList().at(i)->getTexture(), NULL, GameDatabase::useDatabase()->getList().at(i)->getTextureRect());
 	}
 	testText->outputText(FPS::useFPS()->update());
 	/*testText2->outputText(FPS::useFPS()->update());

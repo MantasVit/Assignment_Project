@@ -4,17 +4,13 @@ WorldSpace::WorldSpace(){
 	worldName = "World Space";
 	worldX = 0;
 	worldY = 0;
-	worldXEnd = 2000000;
-	worldYEnd = 2000000;
 }
 
 WorldSpace::WorldSpace(std::string name, SDL_Renderer* renderer){
 	worldName = name;
 	worldX = 0;
 	worldY = 0;
-	worldXEnd = 2000000;
-	worldYEnd = 2000000;
-	SDL_RenderDrawLine(renderer, worldX, worldY, worldXEnd, worldYEnd);
+	//SDL_RenderDrawLine(renderer, worldX, worldY, worldXEnd, worldYEnd);
 }
 
 WorldSpace::~WorldSpace(){

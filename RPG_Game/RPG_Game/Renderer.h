@@ -2,11 +2,16 @@
 
 #include <iostream>
 #include "include\SDL.h"
+#include <queue>
+#include "Object.h"
+
+class Object;
 
 class Renderer{
 protected:
-	static Renderer* RendererPointer;
+	static Renderer* rendererPointer;
 	SDL_Renderer* mainRenderer;
+	std::queue<Object*> renderList;
 public:
 	Renderer();
 	~Renderer();
@@ -17,5 +22,7 @@ public:
 	void clearRenderer(SDL_Renderer* renderer);
 	void renderTexture(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Rect* camera, SDL_Rect* rect);
 	void updateRenderer(SDL_Renderer* renderer);
+	void render(SDL_Renderer* renderer);
+	void addToRenderList(Object* object);
 };
 

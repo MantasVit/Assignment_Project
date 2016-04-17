@@ -1,10 +1,10 @@
 #pragma once
 
 #include <string>
-#include "GameObject.h"
+#include "Object.h"
 #include "GameDatabase.h"
 
-class item: public GameObject
+class item: public Object
 {
 protected:
 

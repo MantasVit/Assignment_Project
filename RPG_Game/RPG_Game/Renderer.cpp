@@ -1,6 +1,6 @@
 #include "Renderer.h"
 
-Renderer* Renderer::RendererPointer = nullptr;
+Renderer* Renderer::rendererPointer = nullptr;
 
 Renderer::Renderer(){
 }
@@ -9,13 +9,13 @@ Renderer::~Renderer(){
 }
 
 Renderer* Renderer::useRenderer(){
-	if(RendererPointer == nullptr){
-		RendererPointer = new Renderer();
+	if(rendererPointer == nullptr){
+		rendererPointer = new Renderer();
 		std::cout<<"Renderer created."<<std::endl;
-		return RendererPointer;
+		return rendererPointer;
 	}
 	//std::cout<<"SDL manager already exists."<<std::endl;
-	return RendererPointer;
+	return rendererPointer;
 }
 
 void Renderer::createRenderer(SDL_Window* window){
@@ -35,4 +35,17 @@ void Renderer::renderTexture(SDL_Renderer* renderer, SDL_Texture* texture, SDL_R
 }
 void Renderer::updateRenderer(SDL_Renderer* renderer){
 	SDL_RenderPresent(renderer);
+}
+
+void Renderer::render(SDL_Renderer* renderer){
+	SDL_RenderClear(renderer);
+	for(int i = 0; i < renderList.size(); i++){
+		SDL_RenderCopy(renderer, renderList.front()->getTexture(), renderList.front()->getTextureRect(), renderList.front()->getRenderArea());
+		renderList.pop();
+	}
+	SDL_RenderPresent(renderer);
+}
+
+void Renderer::addToRenderList(Object* object){
+	renderList.push(object);
 }

@@ -21,7 +21,7 @@ GameDatabase* GameDatabase::useDatabase(){
 	return gameDatabasePointer;
 }
 
-void GameDatabase::addObject(GameObject* object){
+void GameDatabase::addObject(Object* object){
 	objectList.push_back(object);
 }
 
@@ -29,7 +29,7 @@ void GameDatabase::addTexture(Texture* texture){
 	textureList.push_back(texture);
 }
 
-std::vector<GameObject*> GameDatabase::getList(){
+std::vector<Object*> GameDatabase::getList(){
 	return objectList;
 }
 

@@ -15,7 +15,7 @@ protected:
 	SDL_Window* gameWindow;
 	SDL_Renderer* gameRenderer;
 	SDL_Event gameEvent;
-	GameObject* axe;
+	Object* axe;
 	Camera mainCamera;
 	WorldSpace* mine;
 	Text*	testText;
