@@ -84,6 +84,12 @@
     <ClCompile Include="ViewFrustum.cpp">
       <Filter>MSEngine\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Quadtree.cpp">
+      <Filter>MSEngine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>MSEngine\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h">
@@ -144,6 +150,12 @@
       <Filter>MSEngine\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ViewFrustum.h">
+      <Filter>MSEngine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Quadtree.h">
+      <Filter>MSEngine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
       <Filter>MSEngine\Header Files</Filter>
     </ClInclude>
   </ItemGroup>

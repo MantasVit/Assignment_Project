@@ -164,6 +164,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Matrix2D.cpp" />
     <ClCompile Include="ObjectBase.cpp" />
+    <ClCompile Include="Quadtree.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="Text.cpp" />
@@ -171,6 +172,7 @@
     <ClCompile Include="TTF.cpp" />
     <ClCompile Include="Vector2D.cpp" />
     <ClCompile Include="ViewFrustum.cpp" />
+    <ClCompile Include="Window.cpp" />
     <ClCompile Include="WorldSpace.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -186,6 +188,7 @@
     <ClInclude Include="Matrix2D.h" />
     <ClInclude Include="MSEngine.h" />
     <ClInclude Include="ObjectBase.h" />
+    <ClInclude Include="Quadtree.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="Text.h" />
@@ -193,6 +196,7 @@
     <ClInclude Include="TTF.h" />
     <ClInclude Include="Vector2D.h" />
     <ClInclude Include="ViewFrustum.h" />
+    <ClInclude Include="Window.h" />
     <ClInclude Include="WorldSpace.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

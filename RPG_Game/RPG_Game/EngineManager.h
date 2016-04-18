@@ -19,6 +19,7 @@ protected:
 	Camera mainCamera;
 	WorldSpace* mine;
 	Text*	testText;
+	SDL_Rect window;
 	/*Text*	testText2;
 	Text*	testText3;
 	Text*	testText4;
@@ -64,6 +65,7 @@ public:
 	static EngineManager* getManager();
 	//Create a game window
 	void createWindow(std::string gameTitle, int resolutionWidth, int resolutionHeight);
+	SDL_Rect* getWindow();
 	Camera* getCamera();
 	//Get the event handler of the game
 	SDL_Event* getEvent();

@@ -21,6 +21,10 @@ EngineManager* EngineManager::getManager(){
 }
 
 void EngineManager::createWindow(std::string gameTitle, int resolutionWidth, int resolutionHeight){
+	window.w = resolutionWidth;
+	window.h = resolutionHeight;
+	window.x = 0;
+	window.y = 0;
 	gameWindow = SDL_CreateWindow(gameTitle.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, resolutionWidth, resolutionHeight, SDL_WINDOW_SHOWN);
 	Renderer::useRenderer()->createRenderer(gameWindow);
 	mine = new WorldSpace("mine", Renderer::useRenderer()->getRenderer());
@@ -77,6 +81,10 @@ void EngineManager::createWindow(std::string gameTitle, int resolutionWidth, int
 	myText29 = new Text(Renderer::useRenderer()->getRenderer(), "fonts\\OpenSans-Regular.ttf", 1000, 2);
 	myText30 = new Text(Renderer::useRenderer()->getRenderer(), "fonts\\OpenSans-Regular.ttf", 1000, 2);*/
 	fps = new FPS();
+}
+
+SDL_Rect* EngineManager::getWindow(){
+	return &window;
 }
 
 SDL_Event* EngineManager::getEvent(){
