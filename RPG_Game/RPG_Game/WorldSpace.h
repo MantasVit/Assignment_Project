@@ -1,7 +1,7 @@
 #pragma once
 
 #include <string>
-#include "item.h"
+#include "include\SDL.h"
 
 class WorldSpace{
 protected:

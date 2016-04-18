@@ -7,6 +7,7 @@ Object::Object(){
 	textureRect.h = h;
 	worldLocationX = 0;
 	worldLocationY = 0;
+	ResourceManager::useResources()->addItem(this);
 }
 
 Object::Object(std::string filename){
@@ -16,6 +17,7 @@ Object::Object(std::string filename){
 	textureRect.h = h;
 	worldLocationX = 0;
 	worldLocationY = 0;
+	ResourceManager::useResources()->addItem(this);
 }
 
 Object::Object(std::string filename, int x, int y){
@@ -25,6 +27,7 @@ Object::Object(std::string filename, int x, int y){
 	textureRect.h = h;
 	worldLocationX = x - (w / 2);
 	worldLocationY = y - (w / 2);
+	ResourceManager::useResources()->addItem(this);
 }
 Object::~Object(){
 
@@ -50,8 +53,16 @@ void Object::setY(int y){
 	textureRect.y = y;
 }
 
-void Object::updateLocation(Camera* camera){
-	textureRect.x = camera->getCameraX() + worldLocationX;
-	std::cout<<textureRect.x<<std::endl;
-	textureRect.y = camera->getCameraY() + worldLocationY;
+int Object::getW(){
+	return textureRect.w;
+}
+
+int Object::getH(){
+	return textureRect.h;
+}
+
+void Object::updateLocation(){
+	textureRect.x =  worldLocationX;
+	//std::cout<<textureRect.x<<std::endl;
+	textureRect.y =  worldLocationY;
 }

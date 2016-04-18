@@ -3,15 +3,14 @@
 #include <iostream>
 #include <vector>
 #include "EngineManager.h"
-#include "item.h"
-#include "Camera.h"
+#include "Object.h"
 
 class GameManager{
 protected:
 	
 	static GameManager* GameManagerPointer;
 	bool				gameRunning;
-	item* hi;
+	Object* hi;
 public:
 	GameManager();
 	~GameManager();

@@ -5,6 +5,7 @@ Camera::Camera(){
 	//camera.h = 600;
 	x = 0;
 	y = 0;
+	vf = new ViewFrustum();
 }
 
 Camera::~Camera(){
@@ -27,3 +28,16 @@ int Camera::getCameraY(){
 /*SDL_Rect* Camera::getRect(){
 	return &camera;
 }*/
+
+void Camera::update(){
+	vf->culling(this);
+	/*for(int i = 0; i < ResourceManager::useResources()->getList().size(); i++){
+		if(ResourceManager::useResources()->getList().at(i)->getWorldLocationX() >= x && ResourceManager::useResources()->getList().at(i)->getWorldLocationX() <= (x + 800)){
+			std::cout<<"object x within camera";
+			if(ResourceManager::useResources()->getList().at(i)->getWorldLocationY() >= y && ResourceManager::useResources()->getList().at(i)->getWorldLocationY() <= (y + 600)){
+			std::cout<<"object y within camera";
+
+			}
+		}
+	}*/
+}

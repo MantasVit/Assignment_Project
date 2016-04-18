@@ -33,13 +33,7 @@
     <ClCompile Include="EngineManager.cpp">
       <Filter>MSEngine\Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GameDatabase.cpp">
-      <Filter>MSEngine\Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="GameManager.cpp">
-      <Filter>MSEngine\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="item.cpp">
       <Filter>MSEngine\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ObjectBase.cpp">
@@ -87,6 +81,9 @@
     <ClCompile Include="Object.cpp">
       <Filter>MSEngine\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ViewFrustum.cpp">
+      <Filter>MSEngine\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h">
@@ -95,13 +92,7 @@
     <ClInclude Include="EngineManager.h">
       <Filter>MSEngine\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GameDatabase.h">
-      <Filter>MSEngine\Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="GameManager.h">
-      <Filter>MSEngine\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="item.h">
       <Filter>MSEngine\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ObjectBase.h">
@@ -150,6 +141,9 @@
       <Filter>MSEngine\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Object.h">
+      <Filter>MSEngine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewFrustum.h">
       <Filter>MSEngine\Header Files</Filter>
     </ClInclude>
   </ItemGroup>

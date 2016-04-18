@@ -3,11 +3,11 @@
 #include <iostream>
 #include <string>
 #include "include\SDL.h"
-#include "GameDatabase.h"
 #include "WorldSpace.h"
 #include "Camera.h"
 #include "Text.h"
 #include "FPS.h"
+#include "Renderer.h"
 
 class EngineManager{
 protected:

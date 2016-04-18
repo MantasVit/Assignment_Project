@@ -1,9 +1,12 @@
 #pragma once
 
 #include "include\SDL.h"
+#include "ObjectBase.h"
 #include "Texture.h"
 #include "Renderer.h"
-#include "ObjectBase.h"
+#include "ResourceManager.h"
+
+class Renderer;
 
 class Object: public ObjectBase{
 protected:
@@ -22,6 +25,8 @@ public:
 	SDL_Rect* getRenderArea();
 	void setX(int x);
 	void setY(int y);
-	void updateLocation(Camera* camera);
+	int getW();
+	int getH();
+	void updateLocation();
 };
 

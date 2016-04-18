@@ -21,17 +21,21 @@ ResourceManager* ResourceManager::useResources(){
 	return resourceManagerPointer;
 }
 
-void ResourceManager::addItem(ObjectBase* object){
+void ResourceManager::addItem(Object* object){
 	objects.push_back(object);
 }
 void ResourceManager::addItem(SDL_Texture* texture){
-
+	//textures.push_back(texture);
 }
 void ResourceManager::addItem(TTF_Font* font){
-
+	//fonts.push_back(font);
 }
 void ResourceManager::addItem(WorldSpace* worldSpace){
+	//worldSpaces.push_back(worldSpace);
+}
 
+std::vector<Object*> ResourceManager::getList(){
+	return objects;
 }
 
 //std::vector<Texture*> GameDatabase::getList(){

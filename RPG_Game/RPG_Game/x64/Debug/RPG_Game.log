@@ -1,18 +1,16 @@
-﻿  main.cpp
-  item.cpp
-  WorldSpace.cpp
-  ResourceManager.cpp
-c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\resourcemanager.cpp(42): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  Renderer.cpp
+﻿  ViewFrustum.cpp
   Object.cpp
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  WorldSpace.cpp
+  ObjectBase.cpp
+  main.cpp
+  ResourceManager.cpp
+  Renderer.cpp
   GameManager.cpp
-  GameDatabase.cpp
-c:\users\mantas\source\repos\assignment_project\rpg_game\rpg_game\gamedatabase.cpp(41): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
   EngineManager.cpp
+  Camera.cpp
   BaseWeapon.cpp
   BaseItem.cpp
   BaseArmour.cpp
-  Generating Code...
-  Skipping... (no relevant changes detected)
-  ObjectBase.cpp
   RPG_Game.vcxproj -> C:\Users\Mantas\Source\Repos\Assignment_Project\RPG_Game\x64\Debug\RPG_Game.exe

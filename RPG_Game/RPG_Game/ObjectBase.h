@@ -1,8 +1,6 @@
 #pragma once
 
 #include "include\SDL.h"
-#include "Texture.h"
-#include "Camera.h"
 
 class ObjectBase{
 protected:

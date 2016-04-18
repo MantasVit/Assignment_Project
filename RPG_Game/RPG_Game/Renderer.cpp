@@ -40,6 +40,7 @@ void Renderer::updateRenderer(SDL_Renderer* renderer){
 void Renderer::render(SDL_Renderer* renderer){
 	SDL_RenderClear(renderer);
 	for(int i = 0; i < renderList.size(); i++){
+		std::cout<<renderList.size()<<std::endl;
 		SDL_RenderCopy(renderer, renderList.front()->getTexture(), renderList.front()->getTextureRect(), renderList.front()->getRenderArea());
 		renderList.pop();
 	}
