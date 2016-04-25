@@ -24,9 +24,9 @@ ResourceManager* ResourceManager::useResources(){
 void ResourceManager::addItem(Object* object){
 	objects.push_back(object);
 }
-void ResourceManager::addItem(EntityBase* entity){
+/*void ResourceManager::addItem(EntityBase* entity){
 	entities.push_back(entity);
-}
+}*/
 void ResourceManager::addItem(SDL_Texture* texture){
 	//textures.push_back(texture);
 }
@@ -41,9 +41,9 @@ std::vector<Object*> ResourceManager::getObjectList(){
 	return objects;
 }
 
-std::vector<Object*> ResourceManager::getEntityList(){
+/*std::vector<EntityBase*> ResourceManager::getEntityList(){
 	return entities;
-}
+}*/
 
 //std::vector<Texture*> GameDatabase::getList(){
 	//return textureList;

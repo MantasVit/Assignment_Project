@@ -3,8 +3,8 @@
 #include <iostream>
 #include "include\SDL.h"
 #include <queue>
-#include "Object.h"
 #include "ResourceManager.h"
+#include "Object.h"
 
 class Object;
 
