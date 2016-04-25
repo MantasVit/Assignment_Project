@@ -66,3 +66,7 @@ void Object::updateLocation(){
 	//std::cout<<textureRect.x<<std::endl;
 	textureRect.y =  worldLocationY;
 }
+
+void Object::update(){
+
+}

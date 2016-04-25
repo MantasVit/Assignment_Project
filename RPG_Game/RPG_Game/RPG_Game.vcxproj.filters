@@ -90,6 +90,12 @@
     <ClCompile Include="Window.cpp">
       <Filter>MSEngine\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="EntityBase.cpp">
+      <Filter>MSEngine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Update.cpp">
+      <Filter>MSEngine\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h">
@@ -156,6 +162,12 @@
       <Filter>MSEngine\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Window.h">
+      <Filter>MSEngine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityBase.h">
+      <Filter>MSEngine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Update.h">
       <Filter>MSEngine\Header Files</Filter>
     </ClInclude>
   </ItemGroup>

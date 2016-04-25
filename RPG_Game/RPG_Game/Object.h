@@ -28,5 +28,6 @@ public:
 	int getW();
 	int getH();
 	void updateLocation();
+	void update();
 };
 

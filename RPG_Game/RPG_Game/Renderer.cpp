@@ -47,6 +47,11 @@ void Renderer::render(SDL_Renderer* renderer){
 	SDL_RenderPresent(renderer);
 }
 
-void Renderer::addToRenderList(Object* object){
-	renderList.push(object);
+void Renderer::updateRenderList(){
+	for(int i = 0; i < ResourceManager::useResources()->getObjectList().size(); i++){
+		renderList.push(ResourceManager::useResources()->getObjectList().at(i));
+	}
+	for(int i = 0; i < ResourceManager::useResources()->getEntityList().size(); i++){
+		renderList.push(ResourceManager::useResources()->getEntityList().at(i));
+	}
 }

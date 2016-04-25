@@ -4,6 +4,7 @@
 #include "include\SDL.h"
 #include <queue>
 #include "Object.h"
+#include "ResourceManager.h"
 
 class Object;
 
@@ -23,6 +24,6 @@ public:
 	void renderTexture(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Rect* camera, SDL_Rect* rect);
 	void updateRenderer(SDL_Renderer* renderer);
 	void render(SDL_Renderer* renderer);
-	void addToRenderList(Object* object);
+	void updateRenderList();
 };
 
