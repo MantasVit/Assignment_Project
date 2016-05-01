@@ -8,6 +8,7 @@
 #include "Text.h"
 #include "FPS.h"
 #include "Renderer.h"
+#include "Window.h"
 
 class EngineManager{
 protected:
@@ -20,6 +21,7 @@ protected:
 	WorldSpace* mine;
 	Text*	testText;
 	SDL_Rect window;
+	Window*	gameWindow2;
 	/*Text*	testText2;
 	Text*	testText3;
 	Text*	testText4;

@@ -1,23 +1,2 @@
-﻿  ViewFrustum.cpp
-  Generating Code...
-  Compiling...
-  main.cpp
-  Update.cpp
-  ResourceManager.cpp
-c:\users\40010931\source\reposi\assignment_project\rpg_game\rpg_game\resourcemanager.cpp(53): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  Renderer.cpp
-  Quadtree.cpp
-c:\users\40010931\source\reposi\assignment_project\rpg_game\rpg_game\quadtree.cpp(5): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-c:\users\40010931\source\reposi\assignment_project\rpg_game\rpg_game\quadtree.cpp(6): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-c:\users\40010931\source\reposi\assignment_project\rpg_game\rpg_game\quadtree.cpp(7): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-c:\users\40010931\source\reposi\assignment_project\rpg_game\rpg_game\quadtree.cpp(8): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-  Object.cpp
-  GameManager.cpp
-  EntityBase.cpp
-  EngineManager.cpp
-  Camera.cpp
-  BaseWeapon.cpp
-  BaseItem.cpp
-  BaseArmour.cpp
-  Generating Code...
-  RPG_Game.vcxproj -> C:\Users\40010931\Source\Reposi\Assignment_Project\RPG_Game\x64\Debug\RPG_Game.exe
+﻿  EngineManager.cpp
+  RPG_Game.vcxproj -> D:\Users\Mantas\Source\Repository\Assignment_Project\RPG_Game\x64\Debug\RPG_Game.exe
