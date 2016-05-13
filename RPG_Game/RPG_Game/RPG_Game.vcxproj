@@ -162,6 +162,7 @@
     <ClCompile Include="EntityBase.cpp" />
     <ClCompile Include="FPS.cpp" />
     <ClCompile Include="GameManager.cpp" />
+    <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Matrix2D.cpp" />
@@ -189,6 +190,7 @@
     <ClInclude Include="EntityBase.h" />
     <ClInclude Include="FPS.h" />
     <ClInclude Include="GameManager.h" />
+    <ClInclude Include="Inventory.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Matrix2D.h" />
     <ClInclude Include="MSEngine.h" />

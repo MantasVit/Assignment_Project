@@ -65,9 +65,9 @@ Window::Window(int w, int h, std::string flag){
 	}
 }
 
-Window::Window(std::string windowTitle){
+/*Window::Window(std::string windowTitle){
 	gameWindow = SDL_CreateWindow(windowTitle.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, DEFAULT_WIDTH, DEFAULT_HEIGHT, 0);
-}
+}*/
 
 Window::Window(std::string windowTitle, int w, int h){
 	gameWindow = SDL_CreateWindow(windowTitle.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, w, h, 0);

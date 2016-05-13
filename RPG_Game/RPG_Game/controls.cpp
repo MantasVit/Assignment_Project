@@ -24,4 +24,5 @@ bool controls::update()
 		return ENTER;
 		
 	}*/
+	return true;
 }
