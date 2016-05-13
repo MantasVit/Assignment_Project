@@ -22,7 +22,7 @@ GameManager* GameManager::getManager(){
 
 void GameManager::startGame(){
 	EngineManager::getManager()->createWindow("test", 800, 600);
-	hi = new item("WorldSpace_test.png", 300, 500);
+	hi = new Object("WorldSpace_test.png", 300, 500);
 	update();
 }
 
@@ -50,6 +50,6 @@ void GameManager::update(){
 		}
 	EngineManager::getManager()->update();
 	//Wo
-	hi->updateLocation(EngineManager::getManager()->getCamera());
+	hi->updateLocation();
 	}
 }

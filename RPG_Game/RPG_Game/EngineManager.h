@@ -3,11 +3,12 @@
 #include <iostream>
 #include <string>
 #include "include\SDL.h"
-#include "GameDatabase.h"
 #include "WorldSpace.h"
 #include "Camera.h"
 #include "Text.h"
 #include "FPS.h"
+#include "Renderer.h"
+#include "Window.h"
 
 class EngineManager{
 protected:
@@ -15,10 +16,19 @@ protected:
 	SDL_Window* gameWindow;
 	SDL_Renderer* gameRenderer;
 	SDL_Event gameEvent;
-	GameObject* axe;
+	Object* axe;
 	Camera mainCamera;
 	WorldSpace* mine;
 	Text*	testText;
+	SDL_Rect window;
+	Window*	gameWindow2;
+	/*Text*	testText2;
+	Text*	testText3;
+	Text*	testText4;
+	Text*	testText5;
+	Text*	testText6;
+	Text*	testText7;
+	Text*	testText8;*/
 	/*Text* myText;
 	Text* myText2;
 	Text* myText3;
@@ -57,6 +67,7 @@ public:
 	static EngineManager* getManager();
 	//Create a game window
 	void createWindow(std::string gameTitle, int resolutionWidth, int resolutionHeight);
+	SDL_Rect* getWindow();
 	Camera* getCamera();
 	//Get the event handler of the game
 	SDL_Event* getEvent();

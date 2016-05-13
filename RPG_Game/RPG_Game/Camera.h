@@ -1,10 +1,13 @@
 #pragma once
 
-#include "SDL.h"
-#include "Matrix2D.h"
+#include "ViewFrustum.h"
+
+class ViewFrustum;
 
 class Camera{
+protected:
 	int x, y;
+	ViewFrustum* vf;
 public:
 	Camera();
 	~Camera();
@@ -13,5 +16,6 @@ public:
 	int getCameraX();
 	int getCameraY();
 	//SDL_Rect* getRect();
+	void update();
 };
 

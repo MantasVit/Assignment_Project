@@ -159,19 +159,23 @@
     <ClCompile Include="Controller.cpp" />
     <ClCompile Include="controls.cpp" />
     <ClCompile Include="EngineManager.cpp" />
+    <ClCompile Include="EntityBase.cpp" />
     <ClCompile Include="FPS.cpp" />
-    <ClCompile Include="GameDatabase.cpp" />
     <ClCompile Include="GameManager.cpp" />
-    <ClCompile Include="GameObject.cpp" />
-    <ClCompile Include="item.cpp" />
+    <ClCompile Include="Object.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Matrix2D.cpp" />
     <ClCompile Include="ObjectBase.cpp" />
+    <ClCompile Include="Quadtree.cpp" />
     <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="Text.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="TTF.cpp" />
+    <ClCompile Include="Update.cpp" />
     <ClCompile Include="Vector2D.cpp" />
+    <ClCompile Include="ViewFrustum.cpp" />
+    <ClCompile Include="Window.cpp" />
     <ClCompile Include="WorldSpace.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -182,19 +186,23 @@
     <ClInclude Include="Controller.h" />
     <ClInclude Include="controls.h" />
     <ClInclude Include="EngineManager.h" />
+    <ClInclude Include="EntityBase.h" />
     <ClInclude Include="FPS.h" />
-    <ClInclude Include="GameDatabase.h" />
     <ClInclude Include="GameManager.h" />
-    <ClInclude Include="GameObject.h" />
-    <ClInclude Include="item.h" />
+    <ClInclude Include="Object.h" />
     <ClInclude Include="Matrix2D.h" />
     <ClInclude Include="MSEngine.h" />
     <ClInclude Include="ObjectBase.h" />
+    <ClInclude Include="Quadtree.h" />
     <ClInclude Include="Renderer.h" />
+    <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="Text.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="TTF.h" />
+    <ClInclude Include="Update.h" />
     <ClInclude Include="Vector2D.h" />
+    <ClInclude Include="ViewFrustum.h" />
+    <ClInclude Include="Window.h" />
     <ClInclude Include="WorldSpace.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

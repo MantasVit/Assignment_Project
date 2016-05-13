@@ -1,6 +1,6 @@
 #pragma once
-#include "GameObject.h"
-class BaseItem:public GameObject
+#include "Object.h"
+class BaseItem:public Object
 {
 protected:
 	int		price;

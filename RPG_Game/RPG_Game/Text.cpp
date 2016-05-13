@@ -6,7 +6,7 @@ Text::Text(){
 Text::Text(SDL_Renderer* renderer, std::string Text){
 	text = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 	TTF::useTTF()->addText(renderer, "fonts\\OpenSans-Regular.ttf", text, 16, 0, 0, 0);
-	TTF::useTTF()->getLetterPositions(text, minY, maxY, maxX);
+	//TTF::useTTF()->getLetterPositions(text, minY, maxY, maxX);
 	for(int i = 0; i < text.size(); i++){
 		if(i == 0){
 			minX.at(i) = 0;
@@ -20,7 +20,7 @@ Text::Text(SDL_Renderer* renderer, std::string Text){
 Text::Text(SDL_Renderer* renderer, std::string Text, std::string font){
 	text = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 	TTF::useTTF()->addText(renderer, font, text, 16, 0, 0, 0);
-	TTF::useTTF()->getLetterPositions(text, minY, maxY, maxX);
+	//TTF::useTTF()->getLetterPositions(text, minY, maxY, maxX);
 	for(int i = 0; i < text.size(); i++){
 		if(i == 0){
 			minX.at(i) = 0;
@@ -35,7 +35,7 @@ Text::Text(SDL_Renderer* renderer, std::string Text, std::string font, std::stri
 	if(textType == "static"){
 		text = Text;
 		TTF::useTTF()->addText(renderer, font, text, 16, 0, 0, 0);
-		TTF::useTTF()->getLetterPositions(text, minY, maxY, maxX);
+		//TTF::useTTF()->getLetterPositions(text, minY, maxY, maxX);
 		for(int i = 0; i < text.size(); i++){
 			if(i == 0){
 				minX.at(i) = 0;
@@ -48,7 +48,7 @@ Text::Text(SDL_Renderer* renderer, std::string Text, std::string font, std::stri
 	if(textType == "dynamic"){
 		text = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 		TTF::useTTF()->addText(renderer, font, text, 16, 0, 0, 0);
-		TTF::useTTF()->getLetterPositions(text, minY, maxY, maxX);
+		//TTF::useTTF()->getLetterPositions(text, minY, maxY, maxX);
 		for(int i = 0; i < text.size(); i++){
 			if(i == 0){
 				minX.at(i) = 0;
@@ -64,7 +64,7 @@ Text::Text(SDL_Renderer* renderer, std::string Text, std::string font, std::stri
 	if(textType == "static"){
 		text = Text;
 		TTF::useTTF()->addText(renderer, font, text, fontSize, 0, 0, 0);
-		TTF::useTTF()->getLetterPositions(text, minY, maxY, maxX);
+		//TTF::useTTF()->getLetterPositions(text, minY, maxY, maxX);
 		for(int i = 0; i < text.size(); i++){
 			if(i == 0){
 				minX.at(i) = 0;
@@ -77,7 +77,7 @@ Text::Text(SDL_Renderer* renderer, std::string Text, std::string font, std::stri
 	if(textType == "dynamic"){
 		text = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 		TTF::useTTF()->addText(renderer, font, text, fontSize, 0, 0, 0);
-		TTF::useTTF()->getLetterPositions(text, minY, maxY, maxX);
+		//TTF::useTTF()->getLetterPositions(text, minY, maxY, maxX);
 		for(int i = 0; i < text.size(); i++){
 			if(i == 0){
 				minX.at(i) = 0;
@@ -89,10 +89,12 @@ Text::Text(SDL_Renderer* renderer, std::string Text, std::string font, std::stri
 	}
 }
 
-Text::Text(SDL_Renderer* renderer, std::string Text, std::string font, std::string textType, int fontSize, int r, int g, int b){
-	std::cout<<"text"<<std::endl;
+Text::Text(SDL_Renderer* renderer, std::string Text, std::string font, std::string textType, int fontSize, int r, int g, int b, int x, int y){
+	//std::cout<<"text"<<std::endl;
+	x3 = x;
+	y3 = y;
 	if(textType == "static"){
-		std::cout<<"?????????????"<<std::endl;
+		std::cout<<"!!!!"<<std::endl;
 		text = Text;
 		//TTF::useTTF()->addText(renderer, font, text, fontSize, r, g, b);
 		//TTF::useTTF()->getLetterPositions(text, minY, maxY, maxX);
@@ -105,22 +107,33 @@ Text::Text(SDL_Renderer* renderer, std::string Text, std::string font, std::stri
 			}
 		}*/
 	}
-	std::cout<<"?????????????"<<std::endl;
+	//std::cout<<"?????????????"<<std::endl;
 	if(textType == "dynamic"){
-		std::cout<<"?????????????"<<std::endl;
+		//std::cout<<"?????????????"<<std::endl;
 		text = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+		Font = font;
+		FontSize = fontSize;
+		//std::string lol = "123";
+		//std::cout<<"ok"<<std::endl;
+		maxX2.resize(text.size());
 		TTF::useTTF()->addText(renderer, font, text, fontSize, r, g, b);
-		//TTF::useTTF()->getLetterPositions(text, minY, maxY, maxX);
+		SDL_QueryTexture(getTexture(), NULL, NULL, &w2, &h2);
+		//std::cout<<"good"<<std::endl;
+		TTF::useTTF()->getLetterPositions(text, &minY, &maxY, &maxX);
+		//std::cout<<"wat"<<std::endl;
 		for(int i = 0; i < text.size(); i++){
-			std::cout<<"for loop"<<std::endl;
+			//std::cout<<"for loop"<<std::endl;
 			if(i == 0){
-				std::cout<<"1 = 0"<<std::endl;
+				//std::cout<<"1 = 0"<<std::endl;
 				minX.push_back(0);
 			}
 			else if(i >= 1){
+				maxX2.at(i) = maxX.at(i);
+				maxX.at(i) = maxX.at(i) + maxX.at(i-1);
+				minX.push_back(maxX.at(i-1));
 				//std::cout<<minX.at(i)<<std::endl;
 				//std::cout<<maxX.at(i)<<std::endl;
-				//minX.push_back(maxX.at(i-1));
+				
 			}
 		}
 	}
@@ -131,7 +144,7 @@ Text::~Text()
 }
 
 SDL_Texture* Text::getTexture(){
-	return TTF::useTTF()->getTexture(text);
+	return TTF::useTTF()->getTexture(text, Font, FontSize);
 }
 
 SDL_Rect* Text::getRect() {
@@ -276,7 +289,7 @@ SDL_Rect* Text::getRect_5() {
 
 void Text::outputText(std::string Text) {
 	//if(perfTest == 1){
-	checkList = all;
+	checkList = text;
 	lettersChecked = 0;
 		//std::cout << checkList.at(i) << std::endl;
 		for (j = 0; j < Text.size(); j++) {
@@ -285,6 +298,7 @@ void Text::outputText(std::string Text) {
 			//std::cout << Text.at(j) << std::endl;
 			//std::cout << "stuck in for loop" << std::endl;
 				if (checkList.at(i) == Text.at(j)) {
+					//std::cout<<i<<std::endl;
 				//std::cout << Text.at(j) << " = " << checkList.at(i) << std::endl;
 				if (letter.size() < Text.size()) {
 					letter.push_back(new SDL_Rect);
@@ -302,33 +316,37 @@ void Text::outputText(std::string Text) {
 					//}
 					//for (int n = 0; n < 1; n++){
 						//std::cout << "letter: " << letter.size() << std::endl;
-					//letter.at(k)->h = h;
-					//letter.at(k)->w = w / checkList.size();
-					//letter.at(k)->x = letter.at(k)->w * k;
+					//letter.at(k)->h = h2;
+					//letter.at(k)->w = w2;
+					//letter.at(k)->x = 0;
 					//letter.at(k)->y = 0;
-					letter.at(k)->h = maxY2.at(i) + 50;
-					letter.at(k)->w = advance2.at(i);
-					letter.at(k)->x = advance2.at(i) * k;
-					letter.at(k)->y = minY2.at(i);
+					letter.at(k)->h = h2;
+					letter.at(k)->w = maxX2.at(i);
+					letter.at(k)->x = x3 + letter.at(k)->w * k;
+					letter.at(k)->y = y3;
 					if(letterSource.size() < letter.size()) {
 						letterSource.push_back(new SDL_Rect);
+						//std::cout<<"new rect"<<std::endl;
 					}
 					for (letterSource.size(); letterSource.size() > letter.size(); letterSource.pop_back()){
 						delete letterSource.back();
 					}
-					std::cout<<letter.size()<<" "<<letterSource.size()<<std::endl;
+					//std::cout<<letter.size()<<" "<<letterSource.size()<<std::endl;
 					for (n = 0; n < letterSource.size(); n++){
 						if (n == k) {
 							//std::cout << "letterSource: "<<letterSource.size()<< std::endl;
 							letterSource.at(n)->h = letter.at(k)->h;
 							letterSource.at(n)->w = letter.at(k)->w;
+							//std::cout<<letterSource.at(n)->x;
 							letterSource.at(n)->x = minX.at(i);
-							letterSource.at(n)->y = minY2.at(i);
+							//std::cout<<maxX.at(28)<<std::endl;
+							letterSource.at(n)->y = minY.at(i);
 							//std::cout <<"N: "<< n << std::endl;
 							//std::cout << "K: " << k << std::endl;
 							//std::cout << "I: " << i << std::endl;
 							//std::cout << "J: " << j << std::endl;
 							letterChecked = true;
+							//std::cout<<"letter checked"<<std::endl;
 							lettersChecked += 1;
 						}
 					}
