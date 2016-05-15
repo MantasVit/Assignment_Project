@@ -15,7 +15,7 @@ public:
 	Window();
 	Window(std::string flag);
 	Window(int w, int h, std::string flag);
-	Window(std::string windowTitle);
+	//Window(std::string windowTitle);
 	Window(std::string windowTitle, int w, int h);
 	Window(std::string windowTitle, std::string flag);
 	Window(std::string windowTitle, int w, int h, std::string flag);

@@ -3,6 +3,7 @@
 Renderer* Renderer::rendererPointer = nullptr;
 
 Renderer::Renderer(){
+	test = new Vector2D();
 }
 
 Renderer::~Renderer(){
@@ -37,14 +38,15 @@ void Renderer::updateRenderer(SDL_Renderer* renderer){
 	SDL_RenderPresent(renderer);
 }
 
-void Renderer::render(SDL_Renderer* renderer){
-	SDL_RenderClear(renderer);
+void Renderer::render(){
+	SDL_RenderClear(mainRenderer);
 	for(int i = 0; i < renderList.size(); i++){
 		std::cout<<renderList.size()<<std::endl;
-		SDL_RenderCopy(renderer, renderList.front()->getTexture(), renderList.front()->getTextureRect(), renderList.front()->getRenderArea());
+		SDL_RenderCopy(mainRenderer, renderList.front()->getTexture(), renderList.front()->getTextureRect(), renderList.front()->getRenderArea());
 		renderList.pop();
 	}
-	SDL_RenderPresent(renderer);
+	test->draw(mainRenderer);
+	SDL_RenderPresent(mainRenderer);
 }
 
 void Renderer::updateRenderList(){
