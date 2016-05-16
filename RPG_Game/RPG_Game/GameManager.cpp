@@ -4,6 +4,8 @@ GameManager* GameManager::GameManagerPointer = nullptr;
 
 GameManager::GameManager(){
 	gameRunning = true;
+	control = new controls();
+	level = new levelManager();
 }
 
 GameManager::~GameManager(){
@@ -30,6 +32,8 @@ void GameManager::startGame(){
 
 void GameManager::update(){
 	while(gameRunning){
+		control->inputUpdate(EngineManager::getManager()->getEvent());
+		level->levelUpdate(EngineManager::getManager()->getEvent());
 		while(SDL_PollEvent(EngineManager::getManager()->getEvent())){
 			if (EngineManager::getManager()->getEvent()->type == SDL_QUIT)
 			{

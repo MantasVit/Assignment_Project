@@ -111,6 +111,12 @@
     <ClCompile Include="Inventory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="town.cpp">
+      <Filter>Dawid\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="levelManager.cpp">
+      <Filter>Dawid\Sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h">
@@ -190,6 +196,12 @@
     </ClInclude>
     <ClInclude Include="Inventory.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="town.h">
+      <Filter>Dawid\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="levelManager.h">
+      <Filter>Dawid\Headers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -7,11 +7,14 @@ using namespace std;
 class controls
 {
 protected:
-	SDL_Event evt;
 	bool ENTER;
+	bool UP;
+	bool DOWN;
+	bool LEFT;
+	bool RIGHT;
 
 public:
 	controls();
 	~controls();
-	bool update();
+	bool inputUpdate(SDL_Event* evt);
 };

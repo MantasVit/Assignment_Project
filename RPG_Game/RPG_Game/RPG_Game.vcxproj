@@ -163,6 +163,7 @@
     <ClCompile Include="FPS.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="Inventory.cpp" />
+    <ClCompile Include="levelManager.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Matrix2D.cpp" />
@@ -172,6 +173,7 @@
     <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="Text.cpp" />
     <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="town.cpp" />
     <ClCompile Include="TTF.cpp" />
     <ClCompile Include="Update.cpp" />
     <ClCompile Include="Vector2D.cpp" />
@@ -191,6 +193,7 @@
     <ClInclude Include="FPS.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="Inventory.h" />
+    <ClInclude Include="levelManager.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Matrix2D.h" />
     <ClInclude Include="MSEngine.h" />
@@ -200,6 +203,7 @@
     <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="Text.h" />
     <ClInclude Include="Texture.h" />
+    <ClInclude Include="town.h" />
     <ClInclude Include="TTF.h" />
     <ClInclude Include="Update.h" />
     <ClInclude Include="Vector2D.h" />

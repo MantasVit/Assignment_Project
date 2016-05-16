@@ -4,6 +4,8 @@
 #include <vector>
 #include "EngineManager.h"
 #include "Object.h"
+#include "controls.h"
+#include "levelManager.h"
 
 class GameManager{
 protected:
@@ -11,6 +13,8 @@ protected:
 	static GameManager* GameManagerPointer;
 	bool				gameRunning;
 	Object* hi;
+	controls* control;
+	levelManager* level;
 public:
 	GameManager();
 	~GameManager();

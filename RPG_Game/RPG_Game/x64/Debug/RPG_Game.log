@@ -1,2 +1,3 @@
-﻿  Inventory.cpp
-  RPG_Game.vcxproj -> D:\Users\Mantas\Source\Repo\Assignment_Project\RPG_Game\x64\Debug\RPG_Game.exe
+﻿  levelManager.cpp
+BaseArmour.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:LBR' specification
+  RPG_Game.vcxproj -> C:\Users\40035742\Source\Repo\Assignment_Project\RPG_Game\x64\Debug\RPG_Game.exe
