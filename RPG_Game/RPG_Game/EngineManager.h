@@ -9,12 +9,13 @@
 #include "FPS.h"
 #include "Renderer.h"
 #include "Window.h"
+#include "Vector2D.h"
 
 class EngineManager{
 protected:
 	static EngineManager* EngineManagerPointer;
 	SDL_Window* gameWindow;
-	SDL_Renderer* gameRenderer;
+	Renderer* gameRenderer;
 	SDL_Event gameEvent;
 	Object* axe;
 	Camera mainCamera;
@@ -22,6 +23,7 @@ protected:
 	Text*	testText;
 	SDL_Rect window;
 	Window*	gameWindow2;
+	Vector2D *vector;
 	/*Text*	testText2;
 	Text*	testText3;
 	Text*	testText4;

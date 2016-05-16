@@ -21,3 +21,9 @@ void Vector2D::normalize(){
 	x = x / magnitude();
 	y = y / magnitude();
 }
+
+void Vector2D::draw(SDL_Renderer* renderer){
+	SDL_SetRenderDrawColor( renderer, 0x00, 0x00, 0xFF, 0xFF ); 
+	SDL_RenderDrawLine(renderer, 100, 100, 200, 200);
+	printf("drawn");
+}

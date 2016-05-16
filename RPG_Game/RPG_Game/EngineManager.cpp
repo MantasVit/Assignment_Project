@@ -82,6 +82,7 @@ void EngineManager::createWindow(std::string gameTitle, int resolutionWidth, int
 	myText29 = new Text(Renderer::useRenderer()->getRenderer(), "fonts\\OpenSans-Regular.ttf", 1000, 2);
 	myText30 = new Text(Renderer::useRenderer()->getRenderer(), "fonts\\OpenSans-Regular.ttf", 1000, 2);*/
 	fps = new FPS();
+	vector = new Vector2D();
 }
 
 SDL_Rect* EngineManager::getWindow(){
@@ -97,11 +98,12 @@ Camera* EngineManager::getCamera(){
 }
 
 void EngineManager::update(){
-	/*Renderer::useRenderer()->clearRenderer(Renderer::useRenderer()->getRenderer());
-	for(int i = 0; i < GameDatabase::useDatabase()->getSize(); i++){
-		Renderer::useRenderer()->renderTexture(Renderer::useRenderer()->getRenderer(), GameDatabase::useDatabase()->getList().at(i)->getTexture(), NULL, GameDatabase::useDatabase()->getList().at(i)->getTextureRect());
-	}*/
-	testText->outputText(FPS::useFPS()->update());
+	Renderer::useRenderer()->clearRenderer(Renderer::useRenderer()->getRenderer());
+	for(int i = 0; i < ResourceManager::useResources()->getSize(); i++){
+		Renderer::useRenderer()->renderTexture(Renderer::useRenderer()->getRenderer(), ResourceManager::useResources()->getObjectList().at(i)->getTexture(), NULL, ResourceManager::useResources()->getObjectList().at(i)->getTextureRect());
+	}
+	//vector->draw(Renderer::useRenderer()->getRenderer());
+	//testText->outputText(FPS::useFPS()->update());
 	/*testText2->outputText(FPS::useFPS()->update());
 	testText3->outputText(FPS::useFPS()->update());
 	testText4->outputText(FPS::useFPS()->update());
@@ -205,7 +207,7 @@ void EngineManager::update(){
 	//Text::getText()->TEST(10);
 	//Text::getText()->TEST(30);
 	//Text::getText()->TEST(61);
-	//Renderer::useRenderer()->updateRenderer(Renderer::useRenderer()->getRenderer());
+	Renderer::useRenderer()->updateRenderer(Renderer::useRenderer()->getRenderer());
 	mainCamera.update();
-	Renderer::useRenderer()->render(gameRenderer);
+	//Renderer::useRenderer()->render(gameRenderer);
 }
