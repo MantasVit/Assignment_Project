@@ -25,8 +25,8 @@ void EngineManager::createWindow(std::string gameTitle, int resolutionWidth, int
 	window.h = resolutionHeight;
 	window.x = 0;
 	window.y = 0;
-	gameWindow2 = new Window(gameTitle, resolutionWidth, resolutionHeight, "SHOWN");
-	//gameWindow = SDL_CreateWindow(gameTitle.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, resolutionWidth, resolutionHeight, SDL_WINDOW_SHOWN);
+	//gameWindow2 = new Window(gameTitle, resolutionWidth, resolutionHeight, "SHOWN");
+	gameWindow = SDL_CreateWindow(gameTitle.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, resolutionWidth, resolutionHeight, SDL_WINDOW_SHOWN);
 	Renderer::useRenderer()->createRenderer(gameWindow);
 	mine = new WorldSpace("mine", Renderer::useRenderer()->getRenderer());
 	mainCamera.setCameraX(mine->getXCoordinates() / 2);
@@ -98,10 +98,10 @@ Camera* EngineManager::getCamera(){
 }
 
 void EngineManager::update(){
-	Renderer::useRenderer()->clearRenderer(Renderer::useRenderer()->getRenderer());
+	/*Renderer::useRenderer()->clearRenderer(Renderer::useRenderer()->getRenderer());
 	for(int i = 0; i < ResourceManager::useResources()->getSize(); i++){
 		Renderer::useRenderer()->renderTexture(Renderer::useRenderer()->getRenderer(), ResourceManager::useResources()->getObjectList().at(i)->getTexture(), NULL, ResourceManager::useResources()->getObjectList().at(i)->getTextureRect());
-	}
+	}*/
 	//vector->draw(Renderer::useRenderer()->getRenderer());
 	//testText->outputText(FPS::useFPS()->update());
 	/*testText2->outputText(FPS::useFPS()->update());
@@ -171,9 +171,9 @@ void EngineManager::update(){
 	//myText29->setText(Renderer::useRenderer()->getRenderer(), FPS::useFPS()->update());
 	myText30->outputText(FPS::useFPS()->update());*/
 	//myText30->setText(Renderer::useRenderer()->getRenderer(), FPS::useFPS()->update());
-	for (int i = 0; i < testText->getLetter().size(); i++) {
+	/*for (int i = 0; i < testText->getLetter().size(); i++) {
 		Renderer::useRenderer()->renderTexture(Renderer::useRenderer()->getRenderer(), testText->getTexture(), testText->getLetterSourceRect(i), testText->getLetterRect(i));
-	}
+	}*/
 	/*for (int i = 0; i < testText2->getLetter().size(); i++) {
 		Renderer::useRenderer()->renderTexture(Renderer::useRenderer()->getRenderer(), testText2->getTexture(), testText2->getLetterSourceRect(i), testText2->getLetterRect(i));
 	}
@@ -207,7 +207,7 @@ void EngineManager::update(){
 	//Text::getText()->TEST(10);
 	//Text::getText()->TEST(30);
 	//Text::getText()->TEST(61);
-	Renderer::useRenderer()->updateRenderer(Renderer::useRenderer()->getRenderer());
+	//Renderer::useRenderer()->updateRenderer(Renderer::useRenderer()->getRenderer());
 	mainCamera.update();
-	//Renderer::useRenderer()->render(gameRenderer);
+	Renderer::useRenderer()->render();
 }
