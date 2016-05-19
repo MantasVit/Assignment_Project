@@ -8,6 +8,8 @@ controls::controls()
 	DOWN = false;
 	LEFT = false;
 	RIGHT = false;
+	MOUSELEFT = false;
+	MOUSERIGHT = false;
 
 }
 
@@ -55,6 +57,22 @@ bool controls::inputUpdate(SDL_Event* evt)
 		RIGHT = true;
 		cout << "RIGHT PRESSED" << endl;
 		return RIGHT;
+	}
+
+	Uint32 SDL_GetMouseState(int* x, int* y);
+	SDL_PumpEvents();
+	if (SDL_GetMouseState(NULL, NULL) & SDL_BUTTON(SDL_BUTTON_LEFT))
+	{
+		MOUSELEFT = true;
+		cout << "MOUSE LEFT PRESSED" << endl;
+		return MOUSELEFT;
+	}
+
+	if (SDL_GetMouseState(NULL, NULL) & SDL_BUTTON(SDL_BUTTON_RIGHT))
+	{
+		MOUSERIGHT = true;
+		cout << "MOUSE RIGHT PRESSED" << endl;
+		return MOUSERIGHT;
 	}
 
 	//KEY RELEASES

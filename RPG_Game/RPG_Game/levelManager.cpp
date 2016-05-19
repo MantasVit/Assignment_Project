@@ -1,5 +1,6 @@
 #include "levelManager.h"
 #include "town.h"
+#include "armorsmith.h"
 
 levelManager::levelManager()
 {
@@ -42,6 +43,19 @@ void levelManager::levelUpdate(SDL_Event* evt)
 				currentLevel->update();
 			}
 			break;
+		case SHOP_TRANSITION:
+			delete currentLevel;
+			currentLevel = new shop();
+			gameState = SHOP;
+			break;
+			break;
+		case SHOP:
+			if (currentLevel != NULL)
+			{
+				currentLevel->update();
+			}
+			break;
 	}
 }
+
 

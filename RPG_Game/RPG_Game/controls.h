@@ -12,6 +12,8 @@ protected:
 	bool DOWN;
 	bool LEFT;
 	bool RIGHT;
+	bool MOUSELEFT;
+	bool MOUSERIGHT;
 
 public:
 	controls();

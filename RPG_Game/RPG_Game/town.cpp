@@ -12,5 +12,5 @@ town::~town()
 
 void town::update(SDL_Event* evt)
 {
-
+	
 }

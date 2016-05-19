@@ -2,33 +2,23 @@
 #include <SDL.h>
 #include <iostream>
 #include "Object.h"
-#include "shop.h"
+#include "BaseItem.h"
 
 using namespace std;
 
-class town: public Object
+class shop : public Object
 {
 protected:
 	Object* background;
-	shop* weaponsmith;
-	shop* armorsmith;
-	shop* alchemy;
-
+	vector<BaseItem*> items;
 public:
-	town();
-	~town();
+	shop();
+	shop();
+	shop();
+	shop();
+	~shop();
 	void update(SDL_Event* evt);
 };
-
-
-
-
-
-
-
-
-
-
 
 
 
