@@ -31,6 +31,15 @@
     <Filter Include="Dawid\Sources">
       <UniqueIdentifier>{d489b219-eb49-4a25-ba30-faef522a7b8f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Amadeusz">
+      <UniqueIdentifier>{78d848ea-5962-41f0-a1ac-827658e59b2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Amadeusz\Headers">
+      <UniqueIdentifier>{8529878b-e2f0-4631-8496-47588236899b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Amadeusz\Sources">
+      <UniqueIdentifier>{79986294-6031-460a-9e26-76206db99a15}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -117,6 +126,15 @@
     <ClCompile Include="levelManager.cpp">
       <Filter>Dawid\Sources</Filter>
     </ClCompile>
+    <ClCompile Include="F:\GameProject\GameProject\Entity.cpp">
+      <Filter>Amadeusz\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\GameProject\GameProject\Player.cpp">
+      <Filter>Amadeusz\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Amadeusz\Sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h">
@@ -202,6 +220,18 @@
     </ClInclude>
     <ClInclude Include="levelManager.h">
       <Filter>Dawid\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\GameProject\GameProject\Player.h">
+      <Filter>Amadeusz\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\GameProject\GameProject\Entity.h">
+      <Filter>Amadeusz\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Combat.h">
+      <Filter>Amadeusz\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>Amadeusz\Headers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

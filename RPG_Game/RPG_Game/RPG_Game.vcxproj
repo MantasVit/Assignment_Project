@@ -158,8 +158,11 @@
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Controller.cpp" />
     <ClCompile Include="controls.cpp" />
+    <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="EngineManager.cpp" />
     <ClCompile Include="EntityBase.cpp" />
+    <ClCompile Include="F:\GameProject\GameProject\Entity.cpp" />
+    <ClCompile Include="F:\GameProject\GameProject\Player.cpp" />
     <ClCompile Include="FPS.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="Inventory.cpp" />
@@ -186,10 +189,14 @@
     <ClInclude Include="BaseItem.h" />
     <ClInclude Include="BaseWeapon.h" />
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="Combat.h" />
     <ClInclude Include="Controller.h" />
     <ClInclude Include="controls.h" />
+    <ClInclude Include="Enemy.h" />
     <ClInclude Include="EngineManager.h" />
     <ClInclude Include="EntityBase.h" />
+    <ClInclude Include="F:\GameProject\GameProject\Entity.h" />
+    <ClInclude Include="F:\GameProject\GameProject\Player.h" />
     <ClInclude Include="FPS.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="Inventory.h" />
