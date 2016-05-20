@@ -224,10 +224,10 @@
     <ClInclude Include="F:\GameProject\GameProject\Player.h">
       <Filter>Amadeusz\Headers</Filter>
     </ClInclude>
-    <ClInclude Include="F:\GameProject\GameProject\Entity.h">
+    <ClInclude Include="Combat.h">
       <Filter>Amadeusz\Headers</Filter>
     </ClInclude>
-    <ClInclude Include="Combat.h">
+    <ClInclude Include="Entity.h">
       <Filter>Amadeusz\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Enemy.h">

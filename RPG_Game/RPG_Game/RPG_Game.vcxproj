@@ -194,8 +194,8 @@
     <ClInclude Include="controls.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="EngineManager.h" />
+    <ClInclude Include="Entity.h" />
     <ClInclude Include="EntityBase.h" />
-    <ClInclude Include="F:\GameProject\GameProject\Entity.h" />
     <ClInclude Include="F:\GameProject\GameProject\Player.h" />
     <ClInclude Include="FPS.h" />
     <ClInclude Include="GameManager.h" />

@@ -8,13 +8,14 @@ using namespace std;
 class Entity 
 {
 private:
-	//basic stats for entities
-	short int hp, mp, ar, sp, atk, level, xp;
-	bool isAlive;
+	
 
 protected:
 
 public:
+//basic stats for entities
+	short int hp, mp, ar, sp, atk, level, xp;
+	bool isAlive;
 
 	// Constructors for entities
 	Entity();

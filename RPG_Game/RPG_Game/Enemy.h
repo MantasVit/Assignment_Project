@@ -5,21 +5,22 @@
 #include <string>
 #include "Entity.h"
 
-class Enemy
+
+class Enemy : public Entity
 {
 public:
 	//the stats for enemies: health, armour and damage
-	short int hp, def, dmg;
+	//default blank constructor for enemies
+	Enemy();
+	//overloaded constructor for enemies, has the ability to set the enemy stats
+	Enemy(short int health, short int armour, short int damage, bool Alive);
+	//destructor for enemies
+	~Enemy();
 
 protected:
 
 private:
-	//default blank constructor for enemies
-	Enemy();
-	//overloaded constructor for enemies, has the ability to set the enemy stats
-	Enemy(short int health, short int armour, short int damage);
-	//destructor for enemies
-	~Enemy();
+
 
 
 
