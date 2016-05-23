@@ -1,3 +1,5 @@
+/* MANTAS */
+
 #include "ViewFrustum.h"
 
 

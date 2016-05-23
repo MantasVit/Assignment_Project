@@ -1,3 +1,5 @@
+/* MANTAS */
+
 #include "GameManager.h"
 
 GameManager* GameManager::GameManagerPointer = nullptr;

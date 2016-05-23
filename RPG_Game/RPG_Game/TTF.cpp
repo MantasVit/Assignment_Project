@@ -1,3 +1,5 @@
+/* MANTAS */
+
 #include "TTF.h"
 
 TTF* TTF::ttfPointer = nullptr;

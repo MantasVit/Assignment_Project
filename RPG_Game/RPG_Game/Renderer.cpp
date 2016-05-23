@@ -1,3 +1,5 @@
+/* MANTAS */
+
 #include "Renderer.h"
 #include "ResourceManager.h"
 

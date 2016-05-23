@@ -1,3 +1,5 @@
+/* MANTAS */
+
 #include "Texture.h"
 #include "Renderer.h"
 

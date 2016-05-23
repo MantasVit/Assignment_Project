@@ -1,3 +1,5 @@
+/* MANTAS */
+
 #include "Quadtree.h"
 
 Quadtree::Quadtree(){

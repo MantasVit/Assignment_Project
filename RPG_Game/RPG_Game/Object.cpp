@@ -1,3 +1,5 @@
+/* MANTAS */
+
 #include "Object.h"
 #include "ResourceManager.h"
 

@@ -1,4 +1,4 @@
-//Mantas
+/* MANTAS */
 
 #include "Window.h"
 

@@ -1,3 +1,5 @@
+/* MANTAS */
+
 #include "Camera.h"
 
 Camera::Camera(){

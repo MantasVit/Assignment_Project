@@ -152,10 +152,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\Downloads\Assignment_Project8\Assignment_Project7\RPG_Game\RPG_Game\EntityDatabase.cpp" />
-    <ClCompile Include="..\..\..\..\..\Downloads\Assignment_Project8\Assignment_Project7\RPG_Game\RPG_Game\ObjectDatabase.cpp" />
-    <ClCompile Include="..\..\..\..\..\Downloads\Assignment_Project8\Assignment_Project7\RPG_Game\RPG_Game\TextureDatabase.cpp" />
-    <ClCompile Include="..\..\..\..\..\Downloads\Assignment_Project8\Assignment_Project7\RPG_Game\RPG_Game\WorldSpaceDatabase.cpp" />
     <ClCompile Include="BaseArmour.cpp" />
     <ClCompile Include="BaseItem.cpp" />
     <ClCompile Include="BaseWeapon.cpp" />
@@ -165,6 +161,7 @@
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="EngineManager.cpp" />
     <ClCompile Include="EntityBase.cpp" />
+    <ClCompile Include="EntityDatabase.cpp" />
     <ClCompile Include="F:\GameProject\GameProject\Entity.cpp" />
     <ClCompile Include="F:\GameProject\GameProject\Player.cpp" />
     <ClCompile Include="FPS.cpp" />
@@ -175,11 +172,13 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Matrix2D.cpp" />
     <ClCompile Include="ObjectBase.cpp" />
+    <ClCompile Include="ObjectDatabase.cpp" />
     <ClCompile Include="Quadtree.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="Text.cpp" />
     <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="TextureDatabase.cpp" />
     <ClCompile Include="town.cpp" />
     <ClCompile Include="TTF.cpp" />
     <ClCompile Include="Update.cpp" />
@@ -187,12 +186,9 @@
     <ClCompile Include="ViewFrustum.cpp" />
     <ClCompile Include="Window.cpp" />
     <ClCompile Include="WorldSpace.cpp" />
+    <ClCompile Include="WorldSpaceDatabase.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\Downloads\Assignment_Project8\Assignment_Project7\RPG_Game\RPG_Game\EntityDatabase.h" />
-    <ClInclude Include="..\..\..\..\..\Downloads\Assignment_Project8\Assignment_Project7\RPG_Game\RPG_Game\ObjectDatabase.h" />
-    <ClInclude Include="..\..\..\..\..\Downloads\Assignment_Project8\Assignment_Project7\RPG_Game\RPG_Game\TextureDatabase.h" />
-    <ClInclude Include="..\..\..\..\..\Downloads\Assignment_Project8\Assignment_Project7\RPG_Game\RPG_Game\WorldSpaceDatabase.h" />
     <ClInclude Include="BaseArmour.h" />
     <ClInclude Include="BaseItem.h" />
     <ClInclude Include="BaseWeapon.h" />
@@ -204,6 +200,7 @@
     <ClInclude Include="EngineManager.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="EntityBase.h" />
+    <ClInclude Include="EntityDatabase.h" />
     <ClInclude Include="F:\GameProject\GameProject\Player.h" />
     <ClInclude Include="FPS.h" />
     <ClInclude Include="GameManager.h" />
@@ -213,11 +210,13 @@
     <ClInclude Include="Matrix2D.h" />
     <ClInclude Include="MSEngine.h" />
     <ClInclude Include="ObjectBase.h" />
+    <ClInclude Include="ObjectDatabase.h" />
     <ClInclude Include="Quadtree.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="Text.h" />
     <ClInclude Include="Texture.h" />
+    <ClInclude Include="TextureDatabase.h" />
     <ClInclude Include="town.h" />
     <ClInclude Include="TTF.h" />
     <ClInclude Include="Update.h" />
@@ -225,6 +224,7 @@
     <ClInclude Include="ViewFrustum.h" />
     <ClInclude Include="Window.h" />
     <ClInclude Include="WorldSpace.h" />
+    <ClInclude Include="WorldSpaceDatabase.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

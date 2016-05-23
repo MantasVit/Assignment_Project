@@ -135,16 +135,16 @@
     <ClCompile Include="Enemy.cpp">
       <Filter>Amadeusz\Sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Downloads\Assignment_Project8\Assignment_Project7\RPG_Game\RPG_Game\EntityDatabase.cpp">
+    <ClCompile Include="TextureDatabase.cpp">
       <Filter>MSEngine\Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Downloads\Assignment_Project8\Assignment_Project7\RPG_Game\RPG_Game\ObjectDatabase.cpp">
+    <ClCompile Include="WorldSpaceDatabase.cpp">
       <Filter>MSEngine\Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Downloads\Assignment_Project8\Assignment_Project7\RPG_Game\RPG_Game\TextureDatabase.cpp">
+    <ClCompile Include="ObjectDatabase.cpp">
       <Filter>MSEngine\Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Downloads\Assignment_Project8\Assignment_Project7\RPG_Game\RPG_Game\WorldSpaceDatabase.cpp">
+    <ClCompile Include="EntityDatabase.cpp">
       <Filter>MSEngine\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -245,16 +245,16 @@
     <ClInclude Include="Enemy.h">
       <Filter>Amadeusz\Headers</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\Downloads\Assignment_Project8\Assignment_Project7\RPG_Game\RPG_Game\EntityDatabase.h">
+    <ClInclude Include="TextureDatabase.h">
       <Filter>MSEngine\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\Downloads\Assignment_Project8\Assignment_Project7\RPG_Game\RPG_Game\ObjectDatabase.h">
+    <ClInclude Include="WorldSpaceDatabase.h">
       <Filter>MSEngine\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\Downloads\Assignment_Project8\Assignment_Project7\RPG_Game\RPG_Game\TextureDatabase.h">
+    <ClInclude Include="ObjectDatabase.h">
       <Filter>MSEngine\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\Downloads\Assignment_Project8\Assignment_Project7\RPG_Game\RPG_Game\WorldSpaceDatabase.h">
+    <ClInclude Include="EntityDatabase.h">
       <Filter>MSEngine\Header Files</Filter>
     </ClInclude>
   </ItemGroup>

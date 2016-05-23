@@ -1,3 +1,5 @@
+/* MANTAS */
+
 #include "FPS.h"
 
 FPS* FPS::FPSPointer = nullptr;

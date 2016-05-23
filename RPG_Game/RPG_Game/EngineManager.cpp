@@ -1,3 +1,5 @@
+/* MANTAS */
+
 #include "EngineManager.h"
 
 EngineManager* EngineManager::EngineManagerPointer = nullptr;

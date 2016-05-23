@@ -1,3 +1,5 @@
+/* MANTAS */
+
 #include "Text.h"
 
 Text::Text(){

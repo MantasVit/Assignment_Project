@@ -1,3 +1,5 @@
+/* MANTAS */
+
 #include "EntityBase.h"
 #include "ResourceManager.h"
 

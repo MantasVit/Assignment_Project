@@ -1,3 +1,5 @@
+/* MANTAS */
+
 #include "WorldSpace.h"
 
 WorldSpace::WorldSpace(){

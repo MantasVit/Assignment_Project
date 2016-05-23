@@ -1,3 +1,5 @@
+/* MANTAS */
+
 #include "Update.h"
 #include "ResourceManager.h"
 
