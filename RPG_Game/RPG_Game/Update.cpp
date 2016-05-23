@@ -1,4 +1,5 @@
 #include "Update.h"
+#include "ResourceManager.h"
 
 Update* Update::updatePointer = nullptr;
 
@@ -20,9 +21,10 @@ void Update::update(){
 	for(int i = 0; i < ResourceManager::useResources()->getObjectList().size(); i++){
 		ResourceManager::useResources()->getObjectList().at(i)->update();
 	}
-	/*for(int i = 0; i < ResourceManager::useResources()->getEntityList().size(); i++){
+	for(int i = 0; i < ResourceManager::useResources()->getEntityList().size(); i++){
 		ResourceManager::useResources()->getEntityList().at(i)->update();
-	}*/
+		//ResourceManager::useResources()->getEntityList().at(i)->update();
+	}
 }
 
 void Update::updateUpdateList(){

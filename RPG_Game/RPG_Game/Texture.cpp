@@ -1,11 +1,12 @@
 #include "Texture.h"
+#include "Renderer.h"
 
 Texture::Texture(){
 
 }
 
-Texture::Texture(SDL_Renderer* renderer, std::string filename){
-	tempTexture = IMG_LoadTexture(renderer, filename.c_str());
+Texture::Texture(std::string filename){
+	tempTexture = IMG_LoadTexture(Renderer::useRenderer()->getRenderer(), filename.c_str());
 	std::cout<<"new texture"<<std::endl;
 	if(tempTexture == nullptr){
 		std::cout<<filename<<" not loaded: "<<SDL_GetError()<<std::endl;

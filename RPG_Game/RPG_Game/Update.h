@@ -1,17 +1,22 @@
+/* MANTAS */
+
 #pragma once
 
-#include "ResourceManager.h"
-#include "Object.h"
+#include <queue>
+
+class ObjectBase;
 
 class Update{
 protected:
 	static Update* updatePointer;
-	std::queue<Object*> updateList;
+	std::queue<ObjectBase*> updateList;
 public:
 	Update();
 	~Update();
 	static Update* updateLogic();
+	//update all the objects
 	void update();
+	//update the list of objects getting updated every frame
 	void updateUpdateList();
 };
 

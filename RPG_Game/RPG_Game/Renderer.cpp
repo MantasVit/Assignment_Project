@@ -1,4 +1,5 @@
 #include "Renderer.h"
+#include "ResourceManager.h"
 
 Renderer* Renderer::rendererPointer = nullptr;
 

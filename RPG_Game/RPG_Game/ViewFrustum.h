@@ -1,3 +1,5 @@
+/* MANTAS */
+
 #pragma once
 
 #include "ResourceManager.h"

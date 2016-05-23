@@ -152,6 +152,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\Downloads\Assignment_Project8\Assignment_Project7\RPG_Game\RPG_Game\EntityDatabase.cpp" />
+    <ClCompile Include="..\..\..\..\..\Downloads\Assignment_Project8\Assignment_Project7\RPG_Game\RPG_Game\ObjectDatabase.cpp" />
+    <ClCompile Include="..\..\..\..\..\Downloads\Assignment_Project8\Assignment_Project7\RPG_Game\RPG_Game\TextureDatabase.cpp" />
+    <ClCompile Include="..\..\..\..\..\Downloads\Assignment_Project8\Assignment_Project7\RPG_Game\RPG_Game\WorldSpaceDatabase.cpp" />
     <ClCompile Include="BaseArmour.cpp" />
     <ClCompile Include="BaseItem.cpp" />
     <ClCompile Include="BaseWeapon.cpp" />
@@ -185,6 +189,10 @@
     <ClCompile Include="WorldSpace.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\Downloads\Assignment_Project8\Assignment_Project7\RPG_Game\RPG_Game\EntityDatabase.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\Assignment_Project8\Assignment_Project7\RPG_Game\RPG_Game\ObjectDatabase.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\Assignment_Project8\Assignment_Project7\RPG_Game\RPG_Game\TextureDatabase.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\Assignment_Project8\Assignment_Project7\RPG_Game\RPG_Game\WorldSpaceDatabase.h" />
     <ClInclude Include="BaseArmour.h" />
     <ClInclude Include="BaseItem.h" />
     <ClInclude Include="BaseWeapon.h" />

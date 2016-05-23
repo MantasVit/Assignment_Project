@@ -1,3 +1,5 @@
+/* MANTAS */
+
 #pragma once
 
 #include <iostream>
@@ -19,8 +21,9 @@ public:
 	GameManager();
 	~GameManager();
 	static GameManager* getManager();
-	
+	//start the game
 	void startGame();
+	//update the game
 	void update();
 };
 

@@ -28,7 +28,7 @@ void EngineManager::createWindow(std::string gameTitle, int resolutionWidth, int
 	//gameWindow2 = new Window(gameTitle, resolutionWidth, resolutionHeight, "SHOWN");
 	gameWindow = SDL_CreateWindow(gameTitle.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, resolutionWidth, resolutionHeight, SDL_WINDOW_SHOWN);
 	Renderer::useRenderer()->createRenderer(gameWindow);
-	mine = new WorldSpace("mine", Renderer::useRenderer()->getRenderer());
+	mine = new WorldSpace("mine");
 	mainCamera.setCameraX(mine->getXCoordinates() / 2);
 	mainCamera.setCameraY(mine->getYCoordinates() / 2);
 	//myText->showText("lolktest", Renderer::useRenderer()->getRenderer());

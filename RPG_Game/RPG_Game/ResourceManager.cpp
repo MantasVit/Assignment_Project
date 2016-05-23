@@ -1,4 +1,10 @@
+/* MANTAS */
+
 #include "ResourceManager.h"
+#include "ObjectDatabase.h"
+#include "EntityDatabase.h"
+#include "WorldSpaceDatabase.h"
+#include "TextureDatabase.h"
 
 ResourceManager* ResourceManager::resourceManagerPointer = nullptr;
 
@@ -21,34 +27,40 @@ ResourceManager* ResourceManager::useResources(){
 	return resourceManagerPointer;
 }
 
-void ResourceManager::addItem(Object* object){
-	objects.push_back(object);
+void ResourceManager::add(ObjectBase* object){
+	ObjectDatabase::use()->add(object);
 }
-/*void ResourceManager::addItem(EntityBase* entity){
-	entities.push_back(entity);
-}*/
-void ResourceManager::addItem(SDL_Texture* texture){
+void ResourceManager::add(EntityBase* entity){
+	EntityDatabase::use()->add(entity);
+}
+void ResourceManager::add(std::string name, WorldSpace* worldSpace){
+	WorldSpaceDatabase::use()->add(name, worldSpace);
+}
+void ResourceManager::add(SDL_Texture* texture){
 	//textures.push_back(texture);
 }
-void ResourceManager::addItem(TTF_Font* font){
+void ResourceManager::add(TTF_Font* font){
 	//fonts.push_back(font);
 }
-void ResourceManager::addItem(WorldSpace* worldSpace){
-	//worldSpaces.push_back(worldSpace);
+std::vector<ObjectBase*> ResourceManager::getObjectList(){
+	return ObjectDatabase::use()->getObjectList();
+}
+std::vector<EntityBase*> ResourceManager::getEntityList(){
+	return EntityDatabase::use()->getEntityList();
+}
+std::map<std::string, WorldSpace*> ResourceManager::getWorldSpaceList(){
+	return WorldSpaceDatabase::use()->getWorldSpaceMap();
+}
+WorldSpace* ResourceManager::getWorldSpace(std::string name){
+	return WorldSpaceDatabase::use()->getWorldSpace(name);
+}
+void ResourceManager::destroy(WorldSpace* worldSpace){
+	WorldSpaceDatabase::use()->destroy(worldSpace);
+}
+void ResourceManager::destroy(ObjectBase* object){
+	ObjectDatabase::use()->destroy(object);
+}
+void ResourceManager::destroy(EntityBase* entity){
+	EntityDatabase::use()->destroy(entity);
 }
 
-std::vector<Object*> ResourceManager::getObjectList(){
-	return objects;
-}
-
-/*std::vector<EntityBase*> ResourceManager::getEntityList(){
-	return entities;
-}*/
-
-//std::vector<Texture*> GameDatabase::getList(){
-	//return textureList;
-//}
-
-int ResourceManager::getSize(){
-		return objects.size();
-}

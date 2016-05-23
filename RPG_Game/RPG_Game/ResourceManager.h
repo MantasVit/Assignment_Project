@@ -1,38 +1,47 @@
+/* MANTAS */
+
 #pragma once
 
 #include <vector>
 #include <map>
-#include "Texture.h"
-#include "WorldSpace.h"
 #include "include\SDL_ttf.h"
-#include "Object.h"
-//#include "EntityBase.h"
+#include "ObjectBase.h"
+#include "EntityBase.h"
 
-class Object;
-//class EntityBase;
-
-//class WorldSpace;
+class WorldSpace;
 
 class ResourceManager{
 protected:
 	static ResourceManager* resourceManagerPointer;
-	std::vector<Object*> objects;
-	//std::vector<EntityBase*> entities;
 	std::map<std::pair<std::pair<std::string, std::string>, int>, SDL_Texture*> textures;
-	std::map<std::string, WorldSpace*> worldSpaces;
 	std::map<std::pair<std::string, int>, TTF_Font*> fonts;
 public:
 	ResourceManager();
 	~ResourceManager();
 	static ResourceManager* useResources();
-	void addItem(Object* object);
-	//void addItem(EntityBase* entity);
-	void addItem(SDL_Texture* texture);
-	void addItem(TTF_Font* font);
-	void addItem(WorldSpace* worldSpace);
-	std::vector<Object*> getObjectList();
-	//std::vector<EntityBase*> getEntityList();
-	//std::vector<Texture*> getList();
-	int getSize();
+	//add object to object lists
+	void add(ObjectBase* object);
+	//add entity to entity lists
+	void add(EntityBase* entity);
+	//add worldspace to worldspace lists
+	void add(std::string name, WorldSpace* worldSpace);
+	//add texture to texture lists
+	void add(SDL_Texture* texture);
+	//add font to font lists
+	void add(TTF_Font* font);
+	//return object list
+	std::vector<ObjectBase*> getObjectList();
+	//return entity list
+	std::vector<EntityBase*> getEntityList();
+	//return worldspace list
+	std::map<std::string, WorldSpace*> getWorldSpaceList();
+	//return a specific worldspace
+	WorldSpace* getWorldSpace(std::string name);
+	//destroy a worldspace
+	void destroy(WorldSpace* worldSpace);
+	//destroy an object
+	void destroy(ObjectBase* object);
+	//destroy an entity
+	void destroy(EntityBase* entity);
 };
 

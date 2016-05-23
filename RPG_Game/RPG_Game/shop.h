@@ -13,9 +13,6 @@ protected:
 	vector<BaseItem*> items;
 public:
 	shop();
-	shop();
-	shop();
-	shop();
 	~shop();
 	void update(SDL_Event* evt);
 };

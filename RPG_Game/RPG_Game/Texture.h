@@ -1,3 +1,5 @@
+/* MANTAS */
+
 #pragma once
 
 #include <iostream>
@@ -11,7 +13,7 @@ protected:
 	SDL_Texture* objectTexture;
 public:
 	Texture();
-	Texture(SDL_Renderer* renderer, std::string filename);
+	Texture(std::string filename);
 	~Texture();
 	SDL_Texture* getTexture();
 	//SDL_Rect* getRect();

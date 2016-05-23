@@ -1,6 +1,5 @@
 #include "levelManager.h"
 #include "town.h"
-#include "armorsmith.h"
 
 levelManager::levelManager()
 {

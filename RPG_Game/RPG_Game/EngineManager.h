@@ -1,3 +1,5 @@
+/* MANTAS */
+
 #pragma once
 
 #include <iostream>
@@ -10,6 +12,7 @@
 #include "Renderer.h"
 #include "Window.h"
 #include "Vector2D.h"
+#include "Object.h"
 
 class EngineManager{
 protected:

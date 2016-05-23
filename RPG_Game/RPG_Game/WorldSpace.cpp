@@ -4,13 +4,21 @@ WorldSpace::WorldSpace(){
 	worldName = "World Space";
 	worldX = 0;
 	worldY = 0;
+	worldXEnd = 200000;
+	worldYEnd = 200000;
+	ResourceManager::useResources()->add(worldName, this);
+	//ResourceManager::useResources()->addItem(worldName, this);
 }
 
-WorldSpace::WorldSpace(std::string name, SDL_Renderer* renderer){
+WorldSpace::WorldSpace(std::string name){
 	worldName = name;
 	worldX = 0;
 	worldY = 0;
+	worldXEnd = 200000;
+	worldYEnd = 200000;
+	ResourceManager::useResources()->add(worldName, this);
 	//SDL_RenderDrawLine(renderer, worldX, worldY, worldXEnd, worldYEnd);
+	//ResourceManager::useResources()->addItem(worldName, this);
 }
 
 WorldSpace::~WorldSpace(){
