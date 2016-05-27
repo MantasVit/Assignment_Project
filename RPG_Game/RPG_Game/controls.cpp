@@ -3,7 +3,7 @@
 
 controls::controls()
 {
-	ENTER = false;
+	ENTER = false; //setting all booleans to false as no buttons are pressed at the start of it
 	UP = false;
 	DOWN = false;
 	LEFT = false;
@@ -19,16 +19,22 @@ controls::~controls()
 
 }
 
-bool controls::inputUpdate(SDL_Event* evt)
+bool controls::getUP()
+{
+	return UP;
+}
+
+bool controls::inputUpdate()
 {
 	const Uint8* keystate = SDL_GetKeyboardState(NULL);
 	
 	//KEY PRESSES
-	if (keystate[SDL_SCANCODE_RETURN])
+	//KEYBOARD
+	if (keystate[SDL_SCANCODE_RETURN]) //when specific button is pressed
 	{
 		ENTER = true;
-		cout << "ENTER PRESSED" << endl;
-		return ENTER;	
+		cout << "ENTER PRESSED" << endl;  //displaying proof in console
+		return ENTER;	                  //returning the value
 	}
 
 	if (keystate[SDL_SCANCODE_UP])
@@ -59,7 +65,8 @@ bool controls::inputUpdate(SDL_Event* evt)
 		return RIGHT;
 	}
 
-	Uint32 SDL_GetMouseState(int* x, int* y);
+	//MOUSE
+	Uint32 SDL_GetMouseState(int* x, int* y);   //getting mouse coordinates when clicked
 	SDL_PumpEvents();
 	if (SDL_GetMouseState(NULL, NULL) & SDL_BUTTON(SDL_BUTTON_LEFT))
 	{
@@ -76,9 +83,10 @@ bool controls::inputUpdate(SDL_Event* evt)
 	}
 
 	//KEY RELEASES
+	//KEYBOARD
 	if (!keystate[SDL_SCANCODE_RETURN])
 	{
-		ENTER = false;
+		ENTER = false;            //setting false to tell the program that button is not pressed anymore
 		return ENTER;
 	}
 

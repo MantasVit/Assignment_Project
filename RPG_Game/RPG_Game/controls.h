@@ -4,10 +4,10 @@
 
 using namespace std;
 
-class controls
+class controls //class handling controls in the program
 {
 protected:
-	bool ENTER;
+	bool ENTER; //bools to check whether button is pressed or not
 	bool UP;
 	bool DOWN;
 	bool LEFT;
@@ -18,5 +18,6 @@ protected:
 public:
 	controls();
 	~controls();
-	bool inputUpdate(SDL_Event* evt);
+	bool getUP();
+	bool inputUpdate(); //function handling user input
 };

@@ -3,14 +3,15 @@
 #include <iostream>
 #include "Object.h"
 #include "BaseItem.h"
+#include <array>
 
 using namespace std;
 
 class shop : public Object
 {
 protected:
-	Object* background;
-	vector<BaseItem*> items;
+	Object background;
+	array<BaseItem, 4> items;
 public:
 	shop();
 	~shop();
