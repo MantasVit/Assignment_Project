@@ -1,16 +1,17 @@
 #include "controls.h"
 
+bool controls::ENTER = false; //setting all booleans to false as no buttons are pressed at the start of it
+bool controls::UP = false;
+bool controls::DOWN = false;
+bool controls::LEFT = false;
+bool controls::RIGHT = false;
+bool controls::MOUSELEFT = false;
+bool controls::MOUSERIGHT = false;
+const Uint8* controls::keystate = SDL_GetKeyboardState(NULL);
 
 controls::controls()
 {
-	ENTER = false; //setting all booleans to false as no buttons are pressed at the start of it
-	UP = false;
-	DOWN = false;
-	LEFT = false;
-	RIGHT = false;
-	MOUSELEFT = false;
-	MOUSERIGHT = false;
-
+	
 }
 
 controls::~controls()
@@ -19,15 +20,15 @@ controls::~controls()
 
 }
 
-bool controls::getUP()
+bool controls::get(int key)
 {
-	return UP;
+	if(keystate[key]){
+		return true;
+	}
 }
 
 bool controls::inputUpdate()
 {
-	const Uint8* keystate = SDL_GetKeyboardState(NULL);
-	
 	//KEY PRESSES
 	//KEYBOARD
 	if (keystate[SDL_SCANCODE_RETURN]) //when specific button is pressed
