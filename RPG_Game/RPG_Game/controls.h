@@ -14,6 +14,7 @@ protected:
 	static bool RIGHT;
 	static bool MOUSELEFT;
 	static bool MOUSERIGHT;
+	static const Uint8* keystate;
 
 public:
 	controls();
