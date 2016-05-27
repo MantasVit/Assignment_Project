@@ -11,13 +11,13 @@ using namespace std;
 class shop : public Object
 {
 protected:
-	Object* background;
-	array<BaseItem*, 4> items;
+	Object background;
+	array<BaseItem, 4> items;
 public:
 	shop();
 	shop(BaseItem* item1, BaseItem* item2, BaseItem* item3, BaseItem* item4, string shopBackground);
 	~shop();
-	void update(SDL_Event* evt);
+	void update();
 };
 
 

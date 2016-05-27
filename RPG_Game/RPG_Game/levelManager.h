@@ -24,5 +24,5 @@ public:
 	~levelManager();
 	static levelManager* sharedLevelManager();
 	void setState(int ts);
-	void levelUpdate(SDL_Event* evt);
+	void update();
 };

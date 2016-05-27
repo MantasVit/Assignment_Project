@@ -1,6 +1,7 @@
 #include "shop.h"
 #include "controls.h"
 #include "BaseItem.h"
+#include "levelManager.h"
 
 shop::shop()
 {
@@ -26,9 +27,10 @@ shop::shop()
 
 shop::shop(BaseItem* item1, BaseItem* item2, BaseItem* item3, BaseItem* item4, string shopBackground)
 {
+	/*background.setTexture(shopBackground);
 	items[0] = item1;
 	items[0] = item1;
-	items[0] = item1;
+	items[0] = item1;*/
 }
 
 shop::~shop()
@@ -36,8 +38,11 @@ shop::~shop()
 
 }
 
-void shop::update(SDL_Event* evt)
+void shop::update()
 {
-	
+	if (controls::get(SDL_SCANCODE_DOWN))
+	{
+		levelManager::sharedLevelManager()->setState(TOWN_TRANSITION);
+	}
 }
 
