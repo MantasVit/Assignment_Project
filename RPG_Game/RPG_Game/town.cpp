@@ -15,7 +15,7 @@ town::~town()
 
 void town::update()
 {
-	if (control.getUP())
+	if (controls::get(SDL_SCANCODE_UP)
 	{
 		std::cout << "test";
 		levelManager::sharedLevelManager()->setState(SHOP_TRANSITION);
