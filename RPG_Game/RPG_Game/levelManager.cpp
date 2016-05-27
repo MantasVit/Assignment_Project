@@ -1,6 +1,8 @@
 #include "levelManager.h"
 #include "town.h"
 
+levelManager* levelManager::ptrLevelManager = NULL;
+
 levelManager::levelManager()
 {
 	gameState = TOWN_TRANSITION;
@@ -10,6 +12,23 @@ levelManager::levelManager()
 levelManager::~levelManager()
 {
 
+}
+
+levelManager* levelManager::sharedLevelManager()
+{
+	if (ptrLevelManager == NULL)
+	{
+		ptrLevelManager = new levelManager();
+		return ptrLevelManager;
+	}
+
+	return ptrLevelManager;
+
+}
+
+void levelManager::setState(int ts)
+{
+	gameState = ts;
 }
 
 void levelManager::levelUpdate(SDL_Event* evt)
@@ -32,21 +51,20 @@ void levelManager::levelUpdate(SDL_Event* evt)
 		case TOWN_TRANSITION:
 			if (currentLevel == NULL)
 			{
-				currentLevel = new town();
+				currentLevel = new town();  //creating new state of the game
 				gameState = TOWN;
 			}
 			break;
 		case TOWN:
 			if (currentLevel != NULL)
 			{
-				currentLevel->update();
+				currentLevel->update();   //using update function in a specific class
 			}
 			break;
 		case SHOP_TRANSITION:
-			delete currentLevel;
+			delete currentLevel;     //deleting previous level
 			currentLevel = new shop();
 			gameState = SHOP;
-			break;
 			break;
 		case SHOP:
 			if (currentLevel != NULL)
