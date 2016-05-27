@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "Entity.h"
+#include "EntityUP.h"
 #include "Enemy.h"
 
 Enemy::Enemy()

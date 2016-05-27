@@ -156,6 +156,7 @@
     <ClCompile Include="BaseItem.cpp" />
     <ClCompile Include="BaseWeapon.cpp" />
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Combat.cpp" />
     <ClCompile Include="Controller.cpp" />
     <ClCompile Include="controls.cpp" />
     <ClCompile Include="Enemy.cpp" />
@@ -198,7 +199,7 @@
     <ClInclude Include="controls.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="EngineManager.h" />
-    <ClInclude Include="Entity.h" />
+    <ClInclude Include="EntityUP.h" />
     <ClInclude Include="EntityBase.h" />
     <ClInclude Include="EntityDatabase.h" />
     <ClInclude Include="F:\GameProject\GameProject\Player.h" />

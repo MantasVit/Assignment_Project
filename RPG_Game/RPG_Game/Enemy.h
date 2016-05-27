@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <string>
-#include "Entity.h"
+#include "EntityUP.h"
 
 
 class Enemy : public Entity
@@ -16,6 +16,7 @@ public:
 	Enemy(short int health, short int armour, short int damage, bool Alive);
 	//destructor for enemies
 	~Enemy();
+
 
 protected:
 

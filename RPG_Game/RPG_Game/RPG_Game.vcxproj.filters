@@ -147,6 +147,9 @@
     <ClCompile Include="EntityDatabase.cpp">
       <Filter>MSEngine\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Combat.cpp">
+      <Filter>Amadeusz\Sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h">
@@ -239,9 +242,6 @@
     <ClInclude Include="Combat.h">
       <Filter>Amadeusz\Headers</Filter>
     </ClInclude>
-    <ClInclude Include="Entity.h">
-      <Filter>Amadeusz\Headers</Filter>
-    </ClInclude>
     <ClInclude Include="Enemy.h">
       <Filter>Amadeusz\Headers</Filter>
     </ClInclude>
@@ -256,6 +256,9 @@
     </ClInclude>
     <ClInclude Include="EntityDatabase.h">
       <Filter>MSEngine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityUP.h">
+      <Filter>Amadeusz\Headers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
