@@ -18,7 +18,6 @@ protected:
 	bool ARMORSMITH;
 	bool ALCHEMY;
 	bool WEAPONSMITH;
-	controls control;
 
 public:
 	town();
