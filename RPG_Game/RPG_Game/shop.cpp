@@ -24,6 +24,13 @@ shop::shop()
 
 }
 
+shop::shop(BaseItem* item1, BaseItem* item2, BaseItem* item3, BaseItem* item4, string shopBackground)
+{
+	items[0] = item1;
+	items[0] = item1;
+	items[0] = item1;
+}
+
 shop::~shop()
 {
 
