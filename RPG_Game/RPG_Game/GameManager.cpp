@@ -34,8 +34,8 @@ void GameManager::startGame(){
 
 void GameManager::update(){
 	while(gameRunning){
-		control->inputUpdate(EngineManager::getManager()->getEvent());
-		level->levelUpdate(EngineManager::getManager()->getEvent());
+		control->inputUpdate();
+		level->levelUpdate();
 		while(SDL_PollEvent(EngineManager::getManager()->getEvent())){
 			if (EngineManager::getManager()->getEvent()->type == SDL_QUIT)
 			{
