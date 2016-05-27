@@ -12,7 +12,7 @@ const int TOWN = 3;
 const int SHOP_TRANSITION = 4;
 const int SHOP = 5;
 
-class levelManager
+class levelManager  //class used to manage all menus and levels that are included in the game and switch between them on user's demand
 {
 protected:
 	int gameState;

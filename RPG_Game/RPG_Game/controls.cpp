@@ -20,7 +20,7 @@ controls::~controls()
 
 }
 
-bool controls::get(int key)
+bool controls::get(int key)  //function that allows other classes to create if statements that check whether booleans are true or not
 {
 	if(keystate[key]){
 		return true;
@@ -119,34 +119,3 @@ bool controls::inputUpdate()
 	}
 	return false;
 }
-
-
-/*controls function
-
-bool upKey;
-bool downKey...
-booleans in the header under public
-
-
-if(key pressed)
-{
-	if(key that was pressed was up)
-	{
-		keyUp = true;
-	}
-	... repeat for every key you need
-}
-
-	if(key released)
-	{
-		if(key that was pressed was up)
-		{
-		keyUp = false;
-		}
-	}
-
-
-
-
-
-*/

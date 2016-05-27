@@ -8,7 +8,7 @@
 
 using namespace std;
 
-class town: public Object
+class town: public Object   //this is where all shops are created using their template
 {
 protected:
 	Object* background;

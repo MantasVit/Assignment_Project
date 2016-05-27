@@ -156,6 +156,7 @@
     <ClCompile Include="BaseItem.cpp" />
     <ClCompile Include="BaseWeapon.cpp" />
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="collisions.cpp" />
     <ClCompile Include="Combat.cpp" />
     <ClCompile Include="Controller.cpp" />
     <ClCompile Include="controls.cpp" />
@@ -177,6 +178,7 @@
     <ClCompile Include="Quadtree.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="ResourceManager.cpp" />
+    <ClCompile Include="shop.cpp" />
     <ClCompile Include="Text.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="TextureDatabase.cpp" />
@@ -194,6 +196,7 @@
     <ClInclude Include="BaseItem.h" />
     <ClInclude Include="BaseWeapon.h" />
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="collisions.h" />
     <ClInclude Include="Combat.h" />
     <ClInclude Include="Controller.h" />
     <ClInclude Include="controls.h" />
@@ -215,6 +218,7 @@
     <ClInclude Include="Quadtree.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="ResourceManager.h" />
+    <ClInclude Include="shop.h" />
     <ClInclude Include="Text.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="TextureDatabase.h" />

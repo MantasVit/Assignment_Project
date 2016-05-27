@@ -6,7 +6,7 @@ levelManager* levelManager::ptrLevelManager = NULL;
 
 levelManager::levelManager()
 {
-	gameState = TOWN_TRANSITION;
+	gameState = TOWN_TRANSITION;   //setting the state where game starts
 	currentLevel = NULL;
 }
 
@@ -29,12 +29,12 @@ levelManager* levelManager::sharedLevelManager()
 
 void levelManager::setState(int ts)
 {
-	gameState = ts;
+	gameState = ts;   //setter that is used by other classes to change gameState value
 }
 
 void levelManager::update()
 {
-	switch (gameState)
+	switch (gameState)   //switch statement that allows to switch around different levels in the game
 	{
 		/*case MENU_TRANSITION:
 			if (currentLevel == NULL)

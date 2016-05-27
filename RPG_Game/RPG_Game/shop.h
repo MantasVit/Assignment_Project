@@ -8,7 +8,7 @@
 
 using namespace std;
 
-class shop : public Object
+class shop : public Object   //template that will be used by all shops in this game
 {
 protected:
 	Object background;

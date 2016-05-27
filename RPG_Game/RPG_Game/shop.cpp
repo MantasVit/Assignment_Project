@@ -25,7 +25,7 @@ shop::shop()
 
 }
 
-shop::shop(BaseItem* item1, BaseItem* item2, BaseItem* item3, BaseItem* item4, string shopBackground)
+shop::shop(BaseItem* item1, BaseItem* item2, BaseItem* item3, BaseItem* item4, string shopBackground)   //overloaded constructor that will work as a template for all shops
 {
 	/*background.setTexture(shopBackground);
 	items[0] = item1;
@@ -42,7 +42,7 @@ void shop::update()
 {
 	if (controls::get(SDL_SCANCODE_DOWN))
 	{
-		levelManager::sharedLevelManager()->setState(TOWN_TRANSITION);
+		levelManager::sharedLevelManager()->setState(TOWN_TRANSITION);   //pressing down will change the state to TOWN_TRANSITION
 	}
 }
 

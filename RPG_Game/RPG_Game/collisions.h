@@ -4,7 +4,7 @@
 
 using namespace std;
 
-class collisions 
+class collisions //class used to check for collisions between objects as well as mouse clicks
 {
 protected:
 
