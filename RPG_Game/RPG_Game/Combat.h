@@ -19,8 +19,10 @@ public:
 	bool running;
 	string choice;
 
+	//combat for the game, it will currently handle the player fighting only one enemy
+	//however it can be expanded from a single enemy to an array of enemies
 	void combatStart(Player p1, Enemy e1);
-	Player attack(Enemy target);
+
 	
 
 
